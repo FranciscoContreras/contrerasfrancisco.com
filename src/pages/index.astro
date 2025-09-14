@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PersonalHero from '../components/PersonalHero.astro';
+import CompanyCarousel from '../components/CompanyCarousel.astro';
+import HighlightsSection from '../components/HighlightsSection.astro';
+import CaseStudies from '../components/CaseStudies.astro';
+import Technologies from '../components/Technologies.astro';
+import FAQ from '../components/FAQ.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="Francisco - Product Marketing Manager">
+  <Navigation />
+  <main class="min-h-screen bg-glass-bg dark:bg-dark-glass-bg transition-colors duration-300">
+    <PersonalHero />
+    <CompanyCarousel />
+    <HighlightsSection />
+    <CaseStudies />
+    <Technologies />
+    <FAQ />
+    <ContactForm />
+  </main>
+</Layout>
