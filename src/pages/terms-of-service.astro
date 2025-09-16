@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const lastUpdated = new Date().toLocaleDateString('en-US');
+---
+
+<Layout title="Terms of Service - Francisco Contreras">
+  <Navigation />
+  <main class="bg-glass-bg dark:bg-dark-glass-bg pt-28 pb-24 transition-colors duration-300">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header class="mb-12 text-center">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary text-xs font-semibold uppercase tracking-wide mb-4">Legal</span>
+        <h1 class="text-3xl md:text-4xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">Terms of Service</h1>
+        <p class="text-base md:text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 max-w-2xl mx-auto">
+          These terms outline the rules and expectations for using this website and engaging with services offered by Francisco Contreras.
+        </p>
+        <p class="mt-4 text-sm text-glass-gray-500 dark:text-dark-glass-gray-500">Last updated: {lastUpdated}</p>
+      </header>
+
+      <section class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft border border-glass-white/20 dark:border-dark-glass-white/20 space-y-10">
+        <div>
+          <h2 class="text-xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Acceptance of Terms</h2>
+          <p class="text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            By accessing this website or engaging with consulting services, you agree to these Terms of Service. If you do not agree, please discontinue use of the site.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Use of Content</h2>
+          <p class="text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            All content, including case studies, visuals, and copy, is owned by Francisco Contreras unless otherwise stated. You may not reproduce, distribute, or repurpose the content without written permission. Sharing via links with attribution is encouraged.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Consulting Engagements</h2>
+          <ul class="space-y-2 text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed list-disc list-inside">
+            <li>Engagements are governed by separate proposals, statements of work, or master service agreements.</li>
+            <li>All timelines, deliverables, and fees are detailed in written agreements accepted by both parties.</li>
+            <li>Confidential information shared by clients is treated with the highest care and used strictly for engagement purposes.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Disclaimer</h2>
+          <p class="text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            The website is provided on an "as-is" basis. While every effort is made to provide accurate information, no warranties are provided regarding completeness or suitability for any particular purpose. Use of the site is at your own risk.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Limitation of Liability</h2>
+          <p class="text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            Francisco Contreras is not liable for any indirect, incidental, or consequential damages arising from use of the website or services. Liability for direct damages is limited to amounts paid for the relevant engagement.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Changes to Terms</h2>
+          <p class="text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            These terms may be updated periodically to reflect changes in services or legal requirements. Updated versions will be posted on this page with a new effective date.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Contact</h2>
+          <p class="text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            For questions about these terms, contact <a href="mailto:contrerasfrancisco@icloud.com" class="text-glass-primary dark:text-dark-glass-primary hover:underline">contrerasfrancisco@icloud.com</a>.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>

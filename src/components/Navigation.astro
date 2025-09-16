@@ -2,7 +2,7 @@
 // Centered liquid glass navigation header
 ---
 
-<nav class="fixed top-8 w-full z-50">
+<nav id="site-nav" class="fixed top-8 left-0 right-0 z-50 transition-all duration-300">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-center items-center h-14 relative">
       <!-- Logo positioned absolutely on left -->
@@ -27,7 +27,7 @@
       <div class="hidden md:block">
         <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass px-6 py-2 flex items-center space-x-6 shadow-frost border border-glass-gray-200/10 dark:border-dark-glass-gray-200/10">
           <a href="/" class="text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary text-sm font-medium transition-all duration-300">francisco</a>
-          <a href="/writings" class="text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary text-sm font-medium transition-all duration-300">writings</a>
+          <a href="/case-studies" class="text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary text-sm font-medium transition-all duration-300">case studies</a>
           <a href="/resources" class="text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary text-sm font-medium transition-all duration-300">resources</a>
           <a href="/contact" class="text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary text-sm font-medium transition-all duration-300">contact</a>
         </div>
@@ -48,11 +48,22 @@
         </button>
         
         <!-- CTA Button -->
-        <a href="#contact" class="group relative bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-sm font-medium transition-all duration-500 shadow-glass focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 overflow-hidden hover:shadow-xl hover:scale-105 hover:bg-white hover:text-glass-primary">
+        <a href="#contact" class="hidden md:inline-flex group relative bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-sm font-medium transition-all duration-500 shadow-glass focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 overflow-hidden hover:shadow-xl hover:scale-105 hover:bg-white hover:text-glass-primary">
           <span class="relative z-10 transition-colors duration-500">Book an intro call</span>
           <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </a>
-        
+
+        <!-- Mobile CTA Icon -->
+        <a
+          href="/contact"
+          class="md:hidden w-10 h-10 bg-glass-primary/90 dark:bg-dark-glass-primary/90 backdrop-blur-lg rounded-full flex items-center justify-center shadow-glass border border-glass-primary/40 dark:border-dark-glass-primary/40 text-glass-white dark:text-dark-glass-white transition-all duration-300 hover:bg-glass-primary hover:scale-105 focus:outline-none focus:ring-2 focus:ring-glass-primary/30"
+          aria-label="Book an intro call"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5.5a2.5 2.5 0 012.5-2.5h2A2.5 2.5 0 0110 5.5V7a1 1 0 01-.293.707l-1.19 1.19a.5.5 0 00-.11.54 12.04 12.04 0 005.156 5.156.5.5 0 00.54-.11l1.19-1.19A1 1 0 0116 13h1.5a2.5 2.5 0 012.5 2.5v2A2.5 2.5 0 0117.5 20H16c-7.18 0-13-5.82-13-13V5.5z" />
+          </svg>
+        </a>
+
         <!-- Mobile menu button -->
         <div class="md:hidden">
           <button
@@ -95,11 +106,11 @@
           francisco
         </a>
         <a
-          href="/writings"
+          href="/case-studies"
           class="text-2xl font-medium text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 rounded p-2"
           onclick="closeMobileMenu()"
         >
-          writings
+          case studies
         </a>
         <a
           href="/resources"
@@ -132,6 +143,7 @@
 
 <!-- Mobile Theme Toggle - Fixed Bottom Right -->
 <button
+  id="mobile-theme-toggle"
   onclick="toggleTheme()"
   class="md:hidden fixed bottom-6 right-6 z-50 w-12 h-12 bg-glass-white/80 dark:bg-dark-glass-white/80 backdrop-blur-lg rounded-full flex items-center justify-center shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 hover:scale-105"
   aria-label="Toggle theme"
@@ -181,6 +193,48 @@
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
+    const nav = document.getElementById('site-nav');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+
+    const updateNavPosition = () => {
+      if (!nav) return;
+      const isMobile = window.matchMedia('(max-width: 767px)').matches;
+      if (isMobile && window.scrollY > 24) {
+        nav.style.top = 'auto';
+        nav.style.bottom = '1.5rem';
+        nav.style.left = '0';
+        nav.style.right = '0';
+        nav.style.paddingLeft = '1rem';
+        nav.style.paddingRight = '1rem';
+        nav.classList.add('backdrop-blur-md');
+        if (mobileThemeToggle) {
+          mobileThemeToggle.style.bottom = '5.5rem';
+        }
+      } else {
+        nav.style.top = '2rem';
+        nav.style.bottom = '';
+        nav.style.paddingLeft = '';
+        nav.style.paddingRight = '';
+        nav.classList.remove('backdrop-blur-md');
+        if (mobileThemeToggle) {
+          mobileThemeToggle.style.bottom = '1.5rem';
+        }
+      }
+
+      if (!isMobile) {
+        nav.style.top = '2rem';
+        nav.style.bottom = '';
+        nav.style.paddingLeft = '';
+        nav.style.paddingRight = '';
+        if (mobileThemeToggle) {
+          mobileThemeToggle.style.bottom = '1.5rem';
+        }
+      }
+    };
+
+    updateNavPosition();
+    window.addEventListener('scroll', updateNavPosition, { passive: true });
+    window.addEventListener('resize', updateNavPosition);
 
     if (mobileMenuButton && mobileMenu) {
       mobileMenuButton.addEventListener('click', function() {

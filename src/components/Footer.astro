@@ -4,16 +4,25 @@
 
 <footer class="relative bg-glass-bg dark:bg-dark-glass-bg border-t border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 overflow-hidden">
   <!-- Background Logo -->
-  <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-    <div class="text-glass-gray-100/30 dark:text-dark-glass-gray-100/20 font-serif italic font-bold text-[20rem] md:text-[25rem] lg:text-[30rem] xl:text-[35rem] leading-none select-none">
-      francisco
-    </div>
+  <div class="absolute inset-0 overflow-hidden pointer-events-none flex items-end justify-center">
+    <img
+      src="/logo/Francisco-animated.svg"
+      alt="Francisco background"
+      class="w-full max-w-none min-w-[920px] opacity-5 drop-shadow-[0_0_24px_rgba(148,163,184,0.15)] translate-y-8 transition-opacity duration-300 dark:hidden"
+      loading="lazy"
+    />
+    <img
+      src="/logo/Francisco-animated-white.svg"
+      alt="Francisco background"
+      class="hidden dark:block w-full max-w-none min-w-[920px] opacity-15 drop-shadow-[0_0_40px_rgba(15,23,42,0.45)] translate-y-8 transition-opacity duration-300"
+      loading="lazy"
+    />
   </div>
 
   <!-- Footer Content -->
   <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
     <!-- Main Footer Content -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
       <!-- Brand Section -->
       <div class="lg:col-span-1">
         <a href="/" class="block mb-4">
@@ -102,6 +111,33 @@
           <li>
             <a href="/case-studies/marketing-workflow-automation" class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors duration-300">
               Marketing Workflow Automation
+            </a>
+          </li>
+          <li>
+            <a href="/case-studies/customer-journey-optimization" class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors duration-300">
+              Customer Journey Optimization
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h3 class="text-sm font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">Legal</h3>
+        <ul class="space-y-3">
+          <li>
+            <a href="/privacy-policy" class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors duration-300">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="/terms-of-service" class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors duration-300">
+              Terms of Service
+            </a>
+          </li>
+          <li>
+            <a href="/sitemap" class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors duration-300">
+              Sitemap
             </a>
           </li>
         </ul>

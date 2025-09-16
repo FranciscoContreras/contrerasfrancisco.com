@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Sitemap - Francisco Contreras">
+  <Navigation />
+  <main class="bg-glass-bg dark:bg-dark-glass-bg pt-28 pb-24 transition-colors duration-300">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header class="mb-12 text-center">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary text-xs font-semibold uppercase tracking-wide mb-4">Explore</span>
+        <h1 class="text-3xl md:text-4xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">Sitemap</h1>
+        <p class="text-base md:text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 max-w-2xl mx-auto">
+          Quickly navigate to any page on the site. Everything is organised by experience, resources, and legal information.
+        </p>
+      </header>
+
+      <section class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft border border-glass-white/20 dark:border-dark-glass-white/20 grid gap-10 md:grid-cols-2">
+        <div>
+          <h2 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">Core Pages</h2>
+          <ul class="space-y-2 text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            <li><a href="/" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Home</a></li>
+            <li><a href="/writings" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Writings</a></li>
+            <li><a href="/resources" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Resources</a></li>
+            <li><a href="/contact" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">Case Studies</h2>
+          <ul class="space-y-2 text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            <li><a href="/case-studies/saas-platform-gtm" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">SaaS Platform Go-to-Market</a></li>
+            <li><a href="/case-studies/ecommerce-automation" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">E-commerce Automation</a></li>
+            <li><a href="/case-studies/marketing-workflow-automation" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Marketing Workflow Automation</a></li>
+            <li><a href="/case-studies/customer-journey-optimization" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Customer Journey Optimization</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">Resources</h2>
+          <ul class="space-y-2 text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            <li><a href="/writings#playbooks" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Playbooks &amp; Frameworks</a></li>
+            <li><a href="/resources#toolkit" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Marketing Automation Toolkit</a></li>
+            <li><a href="/resources#guides" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Guides &amp; Templates</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">Legal</h2>
+          <ul class="space-y-2 text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            <li><a href="/privacy-policy" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Privacy Policy</a></li>
+            <li><a href="/terms-of-service" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Terms of Service</a></li>
+            <li><a href="/sitemap" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Sitemap</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>

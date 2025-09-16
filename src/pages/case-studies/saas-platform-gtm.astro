@@ -753,22 +753,48 @@ import Footer from '../../components/Footer.astro';
         </div>
       </div>
 
-      <!-- Testimonial -->
-      <div class="bg-glass-primary/5 dark:bg-dark-glass-primary/5 rounded-glass p-8 border border-glass-primary/20 dark:border-dark-glass-primary/20">
-        <div class="text-center">
-          <svg class="w-12 h-12 text-glass-primary/40 dark:text-dark-glass-primary/40 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
-          </svg>
-          <blockquote class="text-xl md:text-2xl text-glass-gray-800 dark:text-dark-glass-gray-800 font-medium mb-6 max-w-4xl mx-auto">
-            "The AI platform launch exceeded our expectations. Francisco's strategic approach and execution delivered results that transformed our market position."
-          </blockquote>
-          <div class="flex items-center justify-center space-x-4">
-            <div class="w-12 h-12 bg-glass-primary/20 dark:bg-dark-glass-primary/20 rounded-full flex items-center justify-center">
-              <span class="text-glass-primary dark:text-dark-glass-primary font-bold">SC</span>
+    </div>
+  </section>
+
+  <!-- Key Learning & Testimonial -->
+  <section class="py-16 bg-glass-white dark:bg-dark-glass-white transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg rounded-glass p-8 md:p-10 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] items-start">
+          <div>
+            <span class="text-xs font-semibold tracking-[0.35em] uppercase text-glass-primary dark:text-dark-glass-primary">Key Learning</span>
+            <h3 class="mt-4 text-2xl md:text-3xl font-serif italic font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 leading-snug">
+              AI launches only scale when value is proven with evidence, not just promises
+            </h3>
+            <p class="mt-4 text-base md:text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+              We earned trust by showing impact early—shipping ROI calculators, product sandboxes, and case demos that made the technology tangible. That proof-first mindset generated 84% of qualified pipeline in the first six months.
+            </p>
+            <div class="mt-6 grid gap-4 sm:grid-cols-3">
+              <div class="rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/30 dark:border-dark-glass-gray-200/30 p-4">
+                <div class="text-lg font-sans font-bold text-glass-primary dark:text-dark-glass-primary">+300%</div>
+                <div class="text-xs uppercase tracking-wide text-glass-gray-600 dark:text-dark-glass-gray-600">User Growth</div>
+              </div>
+              <div class="rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/30 dark:border-dark-glass-gray-200/30 p-4">
+                <div class="text-lg font-sans font-bold text-glass-primary dark:text-dark-glass-primary">$2.5M</div>
+                <div class="text-xs uppercase tracking-wide text-glass-gray-600 dark:text-dark-glass-gray-600">ARR</div>
+              </div>
+              <div class="rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/30 dark:border-dark-glass-gray-200/30 p-4">
+                <div class="text-lg font-sans font-bold text-glass-primary dark:text-dark-glass-primary">85%</div>
+                <div class="text-xs uppercase tracking-wide text-glass-gray-600 dark:text-dark-glass-gray-600">Trial → Paid</div>
+              </div>
             </div>
-            <div class="text-left">
-              <div class="font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Sarah Chen</div>
-              <div class="text-glass-gray-600 dark:text-dark-glass-gray-600">VP of Product</div>
+          </div>
+
+          <div class="bg-white/60 dark:bg-dark-glass-white/40 rounded-glass-sm border border-glass-white/30 dark:border-dark-glass-white/20 p-6 md:p-8 shadow-soft">
+            <svg class="w-8 h-8 text-glass-primary/60 dark:text-dark-glass-primary/60" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+            </svg>
+            <blockquote class="mt-4 text-base md:text-lg font-serif italic text-glass-gray-700 dark:text-dark-glass-gray-300 leading-relaxed">
+              "The AI platform launch exceeded our expectations. Francisco's strategic approach and execution delivered results that transformed our market position."
+            </blockquote>
+            <div class="mt-6">
+              <div class="font-semibold text-glass-gray-900 dark:text-dark-glass-gray-100">Sarah Chen</div>
+              <div class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-400">VP of Product</div>
             </div>
           </div>
         </div>
@@ -776,41 +802,13 @@ import Footer from '../../components/Footer.astro';
     </div>
   </section>
 
-  <!-- Key Learnings -->
-  <section class="py-12 bg-glass-white dark:bg-dark-glass-white transition-colors duration-300">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4 leading-tight">
-          Key Learning
-        </h2>
-        <p class="text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 max-w-3xl mx-auto">
-          The most important insight from this campaign that applies to any AI product launch.
-        </p>
-      </div>
-
-      <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300 text-center">
-        <div class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
-          <svg class="w-8 h-8 text-yellow-600 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-          </svg>
-        </div>
-        <h3 class="text-xl md:text-2xl font-serif italic font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">
-          AI products require clear value demonstration through case studies and demos to build trust
-        </h3>
-        <p class="text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 max-w-3xl mx-auto">
-          Unlike traditional software, AI platforms face inherent skepticism. Our success came from prioritizing tangible value demonstration over feature promotion. ROI calculators, live demos, and detailed case studies became our most effective conversion tools, accounting for 84% of our qualified leads.
-        </p>
-      </div>
-    </div>
-  </section>
-
   <!-- CTA Section -->
-  <section class="py-12 bg-glass-bg dark:bg-dark-glass-bg transition-colors duration-300">
+  <section class="bg-glass-bg dark:bg-dark-glass-bg transition-colors duration-300 pt-16 pb-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-6">
+      <h2 class="text-3xl md:text-4xl font-sans font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-6">
         Ready to Launch Your Product?
       </h2>
-      <p class="text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 mb-8">
+      <p class="text-lg font-serif italic text-glass-gray-600 dark:text-dark-glass-gray-600 mb-8">
         Let's discuss how a strategic go-to-market approach can transform your product launch results.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">

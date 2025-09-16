@@ -1,67 +1,49 @@
 ---
-// Company carousel with liquid glass aesthetic
+const companies = [
+  'Adidas',
+  'Tide',
+  'ManukaGuard',
+  'SmartAC',
+  'ServiceTitan',
+  'Albert Nahman',
+  'Wightons',
+  'Ace Pelizon',
+  'HubSpot',
+  'Klaviyo',
+  'Zapier',
+  'Drift',
+  'Braze',
+  'Toast',
+  'Brex',
+  'Plaid',
+  'Affirm',
+  'Tempus',
+  'Invitae',
+  'Ginkgo'
+];
+
+const marqueeItems = [...companies, ...companies];
 ---
 
 <section class="-mt-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
   <div class="max-w-6xl mx-auto">
     <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600 text-center mb-6 font-medium uppercase tracking-wide transition-colors duration-300">
-      Work on early-stage AI infra, DevTools & Products.
+      work on early-stage AI infra, DevTools & Products.
     </p>
-    
-    <!-- Carousel Container -->
+
     <div class="relative overflow-hidden">
       <div class="flex animate-scroll space-x-6 items-center">
-        <!-- Company Logos - Duplicated for seamless loop -->
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">TechCorp</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">DataFlow</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">AI Solutions</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">CloudTech</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">StartupX</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">InnovateLab</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">FutureAI</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">AutoFlow</span>
-        </div>
-        
-        <!-- Duplicate for seamless loop -->
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">TechCorp</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">DataFlow</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">AI Solutions</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">CloudTech</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">StartupX</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">InnovateLab</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">FutureAI</span>
-        </div>
-        <div class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300 ">
-          <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300">AutoFlow</span>
-        </div>
+        {marqueeItems.map((company, index) => (
+          <div
+            class="flex-shrink-0 w-24 h-12 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass-sm flex items-center justify-center shadow-frost hover:shadow-frost-lg transition-all duration-300"
+            aria-label={`Company: ${company}`}
+            key={`${company}-${index}`}
+          >
+            <span class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-medium text-xs transition-colors duration-300 whitespace-nowrap">
+              {company}
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   </div>
@@ -76,8 +58,8 @@
       transform: translateX(-50%);
     }
   }
-  
+
   .animate-scroll {
-    animation: scroll 30s linear infinite;
+    animation: scroll 55s linear infinite;
   }
 </style>

@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const lastUpdated = new Date().toLocaleDateString('en-US');
+---
+
+<Layout title="Privacy Policy - Francisco Contreras">
+  <Navigation />
+  <main class="bg-glass-bg dark:bg-dark-glass-bg pt-28 pb-24 transition-colors duration-300">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header class="mb-12 text-center">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary text-xs font-semibold uppercase tracking-wide mb-4">Legal</span>
+        <h1 class="text-3xl md:text-4xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">Privacy Policy</h1>
+        <p class="text-base md:text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 max-w-2xl mx-auto">
+          Transparency matters. This policy explains what information is collected, how it is used, and the choices available to you when you interact with Francisco Contreras' website and services.
+        </p>
+        <p class="mt-4 text-sm text-glass-gray-500 dark:text-dark-glass-gray-500">Last updated: {lastUpdated}</p>
+      </header>
+
+      <section class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft border border-glass-white/20 dark:border-dark-glass-white/20 space-y-10">
+        <div>
+          <h2 class="text-xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Information Collected</h2>
+          <p class="text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            The site collects minimal personal information necessary to respond to inquiries, schedule consultations, and deliver requested resources. Typical data includes contact details you provide through forms (name, email, company) as well as anonymous analytics data such as page views and device type. No sensitive personal information is intentionally gathered.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">How Information Is Used</h2>
+          <ul class="space-y-2 text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed list-disc list-inside">
+            <li>Responding to contact requests and scheduling potential engagements.</li>
+            <li>Sending newsletters or resources you opt into receiving.</li>
+            <li>Improving site performance and understanding content effectiveness through aggregated analytics.</li>
+            <li>Maintaining security and preventing misuse of the website.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Cookies & Analytics</h2>
+          <p class="text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            Cookies may be used to remember preferences and enable analytics services (such as privacy-focused tools like Plausible or Google Analytics) to understand aggregate behaviour. You can control cookies through your browser settings. Analytics data is anonymized and not combined with personally identifiable information.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Data Sharing</h2>
+          <p class="text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            Personal data is never sold. It is shared only with trusted service providers strictly for operating the site (e.g., web hosting, email delivery) and under confidentiality obligations. Information may also be disclosed if required to comply with applicable law or protect rights and safety.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Your Choices</h2>
+          <p class="text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            You can request access to, correction of, or deletion of your personal data by emailing <a href="mailto:contrerasfrancisco@icloud.com" class="text-glass-primary dark:text-dark-glass-primary hover:underline">contrerasfrancisco@icloud.com</a>. You may unsubscribe from communications at any time using the link provided in emails. For cookie preferences, adjust your browser settings.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Contact</h2>
+          <p class="text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+            Questions or concerns about this policy can be directed to <a href="mailto:contrerasfrancisco@icloud.com" class="text-glass-primary dark:text-dark-glass-primary hover:underline">contrerasfrancisco@icloud.com</a>.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>

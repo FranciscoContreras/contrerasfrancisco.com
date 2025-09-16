@@ -1,0 +1,599 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Customer Journey Optimization Case Study - Francisco Contreras">
+  <Navigation />
+
+  <!-- Hero Section -->
+  <section class="bg-glass-bg dark:bg-dark-glass-bg pt-32 pb-8 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <div class="flex text-sm text-glass-gray-500 dark:text-dark-glass-gray-500">
+          <a href="/" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Home</a>
+          <span class="mx-2">/</span>
+          <a href="/#case-studies" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Case Studies</a>
+          <span class="mx-2">/</span>
+          <span class="text-glass-gray-700 dark:text-dark-glass-gray-700">Customer Journey Optimization</span>
+        </div>
+      </nav>
+
+      <!-- Hero Content -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center px-3 py-1 rounded-full bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary text-sm font-medium mb-6">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M15 7a3 3 0 11-6 0 3 3 0 016 0zM4 8a2 2 0 114 0 2 2 0 01-4 0zm13 4a3 3 0 11-6 0 3 3 0 016 0zM7 16a4 4 0 118 0v3H7v-3z"/>
+            </svg>
+            Customer Experience Case Study
+          </div>
+
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4 leading-tight">
+            Customer Journey
+            <span class="text-glass-primary dark:text-dark-glass-primary">Optimization</span>
+          </h1>
+
+          <p class="text-lg font-sans text-glass-gray-600 dark:text-dark-glass-gray-600 mb-6 leading-relaxed max-w-2xl">
+            How we re-engineered the onboarding and success journey for a SaaS platform, reducing churn by 45%, boosting customer satisfaction 35%, and unlocking 60% retention growth with proactive lifecycle design.
+          </p>
+
+          <!-- Key Metrics Preview -->
+          <div class="grid grid-cols-3 gap-3 mb-6">
+            <div class="text-center p-3 bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20">
+              <div class="text-xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary">-45%</div>
+              <div class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">Churn Rate</div>
+            </div>
+            <div class="text-center p-3 bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20">
+              <div class="text-xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary">+35%</div>
+              <div class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">CSAT</div>
+            </div>
+            <div class="text-center p-3 bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20">
+              <div class="text-xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary">+60%</div>
+              <div class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">Retention</div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#detailed-analysis" class="group relative bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-sm font-medium transition-all duration-500 shadow-glass focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 overflow-hidden hover:shadow-xl hover:scale-105 hover:bg-white hover:text-glass-primary">
+              <span class="relative z-10 transition-colors duration-500">View Full Analysis</span>
+              <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </a>
+            <a href="#methodology" class="border border-glass-gray-300 dark:border-dark-glass-gray-300 text-glass-gray-700 dark:text-dark-glass-gray-700 px-6 py-3 rounded-glass text-sm font-medium hover:bg-glass-gray-50 dark:hover:bg-dark-glass-gray-50 transition-all duration-300 text-center">
+              See Methodology
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="relative">
+          <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <h3 class="font-semibold text-glass-gray-800 dark:text-dark-glass-gray-800">Journey Health Dashboard</h3>
+                <div class="flex space-x-2">
+                  <div class="w-3 h-3 bg-emerald-400 rounded-full"></div>
+                  <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                  <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-glass-gray-50 dark:bg-dark-glass-gray-50 rounded-lg p-4">
+                  <div class="text-xs text-glass-gray-500 dark:text-dark-glass-gray-500">Onboarding Completion</div>
+                  <div class="text-2xl font-semibold text-glass-primary dark:text-dark-glass-primary">92%</div>
+                  <p class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">↑ from 61% baseline</p>
+                </div>
+                <div class="bg-glass-gray-50 dark:bg-dark-glass-gray-50 rounded-lg p-4">
+                  <div class="text-xs text-glass-gray-500 dark:text-dark-glass-gray-500">Accounts at Risk</div>
+                  <div class="text-2xl font-semibold text-rose-500">-38%</div>
+                  <p class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">after proactive playbooks</p>
+                </div>
+              </div>
+
+              <div class="bg-glass-gray-50 dark:bg-dark-glass-gray-50 rounded-lg p-4 h-36 relative overflow-hidden">
+                <svg class="w-full h-full" viewBox="0 0 300 120">
+                  <polyline
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    class="text-glass-primary dark:text-dark-glass-primary"
+                    points="10,90 60,80 110,70 160,60 210,45 260,35 290,30"
+                  />
+                  <polyline
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-dasharray="6 4"
+                    class="text-rose-300 dark:text-rose-400"
+                    points="10,95 60,96 110,92 160,88 210,84 260,83 290,82"
+                  />
+                </svg>
+                <div class="absolute top-3 left-4 text-xs text-glass-gray-500 dark:text-dark-glass-gray-500">Health Score vs Churn Risk</div>
+                <div class="absolute bottom-3 right-4 text-xs text-glass-gray-500 dark:text-dark-glass-gray-500">Quarterly Trend</div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-white/90 dark:bg-dark-glass-white/40 rounded-lg p-3 border border-glass-gray-200/30 dark:border-dark-glass-gray-200/30">
+                  <div class="text-xs uppercase tracking-wide text-glass-gray-500 dark:text-dark-glass-gray-500">Top Journey Signals</div>
+                  <ul class="mt-2 space-y-1 text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">
+                    <li>• Time to first value &lt; 7 days</li>
+                    <li>• Weekly active champions: 3.2</li>
+                    <li>• Feedback loops closed in 24h</li>
+                  </ul>
+                </div>
+                <div class="bg-white/90 dark:bg-dark-glass-white/40 rounded-lg p-3 border border-glass-gray-200/30 dark:border-dark-glass-gray-200/30">
+                  <div class="text-xs uppercase tracking-wide text-glass-gray-500 dark:text-dark-glass-gray-500">Priority Segments</div>
+                  <ul class="mt-2 space-y-1 text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">
+                    <li>• Mid-market Fintech</li>
+                    <li>• Product-led teams</li>
+                    <li>• High-growth customer success orgs</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Challenge -->
+  <section id="challenge" class="bg-glass-bg dark:bg-dark-glass-bg pt-4 pb-16 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300">
+        <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 leading-tight text-center">
+          The Challenge
+        </h2>
+        <p class="text-base md:text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 mb-6 text-center max-w-3xl mx-auto">
+          High-performing product metrics masked a painful customer experience. New users struggled to reach first value, support conversations were purely reactive, and critical expansion opportunities disappeared before teams could intervene.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-red-50 dark:bg-red-900/20 rounded-glass-sm p-5 border border-red-200/20 dark:border-red-800/20">
+            <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Inconsistent Onboarding</h4>
+            <ul class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600 space-y-1">
+              <li>• 6 different onboarding paths with no governance</li>
+              <li>• 14 day average time-to-first-value</li>
+              <li>• <span class="font-semibold">48%</span> of accounts stalled before activation</li>
+            </ul>
+          </div>
+          <div class="bg-orange-50 dark:bg-orange-900/20 rounded-glass-sm p-5 border border-orange-200/20 dark:border-orange-800/20">
+            <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Reactive Support Model</h4>
+            <ul class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600 space-y-1">
+              <li>• Health scoring relied on quarterly surveys</li>
+              <li>• Playbooks triggered only after churn signals</li>
+              <li>• CS team coaching entirely manual</li>
+            </ul>
+          </div>
+          <div class="bg-yellow-50 dark:bg-yellow-900/20 rounded-glass-sm p-5 border border-yellow-200/20 dark:border-yellow-800/20">
+            <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Fragmented Collaboration</h4>
+            <ul class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600 space-y-1">
+              <li>• Product, marketing, and success teams worked in silos</li>
+              <li>• No shared journey map or success KPIs</li>
+              <li>• Insights trapped inside support transcripts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategic Approach -->
+  <section id="detailed-analysis" class="bg-glass-bg dark:bg-dark-glass-bg pb-16 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 leading-tight text-center">
+        Strategic Approach
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="group bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass text-center transition-all duration-300">
+          <div class="w-12 h-12 bg-glass-primary/10 dark:bg-dark-glass-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-6 h-6 text-glass-primary dark:text-dark-glass-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 11-4 0 2 2 0 014 0zm0 0a2 2 0 104 0 2 2 0 00-4 0zm0 0v6m0 2v6m-4-6h8"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Journey Intelligence</h3>
+          <p class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-sans">Mapped the end-to-end journey with voice-of-customer research, quantified drop-off points, and aligned teams on a single source of truth.</p>
+        </div>
+
+        <div class="group bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass text-center transition-all duration-300">
+          <div class="w-12 h-12 bg-glass-primary/10 dark:bg-dark-glass-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-6 h-6 text-glass-primary dark:text-dark-glass-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Experience Design</h3>
+          <p class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-sans">Built personalized onboarding paths, lifecycle communications, and in-product education for each customer segment.</p>
+        </div>
+
+        <div class="group bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass text-center transition-all duration-300">
+          <div class="w-12 h-12 bg-glass-primary/10 dark:bg-dark-glass-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-6 h-6 text-glass-primary dark:text-dark-glass-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5 6.5V19a2 2 0 01-2 2H6a2 2 0 01-2-2v-4.5a2 2 0 011-1.732l7-4a2 2 0 011.999 0l7 4A2 2 0 0120 13.5z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Proactive Success Ops</h3>
+          <p class="text-glass-gray-600 dark:text-dark-glass-gray-600 font-sans">Automated health scoring, intervention playbooks, and cross-functional alerts to keep teams ahead of risk.</p>
+        </div>
+      </div>
+
+      <!-- Implementation Timeline -->
+      <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+        <h3 class="text-xl font-serif italic font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-6 text-center">Implementation Timeline</h3>
+
+        <div class="relative">
+          <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-glass-gray-300 dark:bg-dark-glass-gray-300"></div>
+          <div class="space-y-8">
+            <div class="relative flex items-start space-x-4">
+              <div class="w-8 h-8 bg-glass-primary dark:bg-dark-glass-primary rounded-full flex items-center justify-center text-white dark:text-black text-sm font-bold relative z-10">1</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center space-x-3 mb-2">
+                  <h4 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Discovery & Diagnosis</h4>
+                  <span class="text-sm text-glass-gray-500 dark:text-dark-glass-gray-500">Weeks 1-3</span>
+                </div>
+                <p class="text-glass-gray-600 dark:text-dark-glass-gray-600 mb-3">Analyzed product analytics, support transcripts, and 60 qualitative interviews to expose journey friction and sentiment trends.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Journey Mapping</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">VOC Research</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Data Audit</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative flex items-start space-x-4">
+              <div class="w-8 h-8 bg-glass-primary dark:bg-dark-glass-primary rounded-full flex items-center justify-center text-white dark:text-black text-sm font-bold relative z-10">2</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center space-x-3 mb-2">
+                  <h4 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Experience Blueprints</h4>
+                  <span class="text-sm text-glass-gray-500 dark:text-dark-glass-gray-500">Weeks 4-7</span>
+                </div>
+                <p class="text-glass-gray-600 dark:text-dark-glass-gray-600 mb-3">Designed segmented onboarding flows, in-product prompts, and communication cadences aligned to customer goals.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Persona Playbooks</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Messaging Framework</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Lifecycle Content</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative flex items-start space-x-4">
+              <div class="w-8 h-8 bg-glass-primary dark:bg-dark-glass-primary rounded-full flex items-center justify-center text-white dark:text-black text-sm font-bold relative z-10">3</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center space-x-3 mb-2">
+                  <h4 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Activation Build</h4>
+                  <span class="text-sm text-glass-gray-500 dark:text-dark-glass-gray-500">Weeks 8-12</span>
+                </div>
+                <p class="text-glass-gray-600 dark:text-dark-glass-gray-600 mb-3">Implemented 5 onboarding flows, 12 automated touchpoints, and integrated product signals into CRM for real-time coaching.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Workflow Automation</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Product Signals</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Enablement</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative flex items-start space-x-4">
+              <div class="w-8 h-8 bg-glass-primary dark:bg-dark-glass-primary rounded-full flex items-center justify-center text-white dark:text-black text-sm font-bold relative z-10">4</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center space-x-3 mb-2">
+                  <h4 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Optimization Loops</h4>
+                  <span class="text-sm text-glass-gray-500 dark:text-dark-glass-gray-500">Weeks 13-18</span>
+                </div>
+                <p class="text-glass-gray-600 dark:text-dark-glass-gray-600 mb-3">Established weekly journey reviews, predictive churn scoring, and executive dashboards tying experience metrics to revenue.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Predictive Alerts</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">QBR Dashboards</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Feedback Loops</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section id="methodology" class="bg-glass-bg dark:bg-dark-glass-bg pb-16 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 leading-tight text-center">
+        Journey Architecture
+      </h2>
+
+      <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300 mb-12">
+        <h3 class="text-xl font-serif italic font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-6 text-center">Lifecycle Blueprint</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 p-5">
+            <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Onboarding</h4>
+            <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Guided setup tailored to role-based objectives with milestone tracking and in-product tours.</p>
+            <div class="mt-4 text-xs text-glass-gray-500 dark:text-dark-glass-gray-500">Time to first value ↓ 50%</div>
+          </div>
+          <div class="rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 p-5">
+            <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Adoption</h4>
+            <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Activated lifecycle campaigns encouraging feature expansion based on usage triggers and intent signals.</p>
+            <div class="mt-4 text-xs text-glass-gray-500 dark:text-dark-glass-gray-500">Weekly active users ↑ 48%</div>
+          </div>
+          <div class="rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 p-5">
+            <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Expansion</h4>
+            <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Lifecycle scoring surfaced upsell readiness and piped opportunities directly to sales for consultative outreach.</p>
+            <div class="mt-4 text-xs text-glass-gray-500 dark:text-dark-glass-gray-500">Expansion pipeline ↑ 32%</div>
+          </div>
+          <div class="rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 p-5">
+            <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Advocacy</h4>
+            <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Automated NPS follow-ups and champion enablement nurtured case studies, reviews, and reference programs.</p>
+            <div class="mt-4 text-xs text-glass-gray-500 dark:text-dark-glass-gray-500">Reference-ready accounts ↑ 27%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300">
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h3 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">Signal-Based Automations</h3>
+            <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600 mb-4">We wired product, support, and billing signals into a unified health model that elevated the right playbook every time.</p>
+            <ul class="space-y-3 text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">
+              <li class="flex items-start space-x-3">
+                <span class="mt-1 text-glass-primary dark:text-dark-glass-primary">●</span>
+                <div><span class="font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Health Scoring:</span> combined product usage, sentiment, and support velocity to forecast churn risk 30 days earlier.</div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="mt-1 text-glass-primary dark:text-dark-glass-primary">●</span>
+                <div><span class="font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Automated Playbooks:</span> triggered 12 lifecycle touchpoints spanning welcome series, value check-ins, QBR prep, and renewal nudges.</div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="mt-1 text-glass-primary dark:text-dark-glass-primary">●</span>
+                <div><span class="font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Team Alerts:</span> routed high-severity signals directly into Slack with context, owner, and next-best action.</div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-glass-gray-50 dark:bg-dark-glass-gray-50 rounded-lg p-6">
+            <h4 class="font-sans font-semibold text-glass-gray-800 dark:text-dark-glass-gray-800 mb-4">Signal Library</h4>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between text-sm font-medium text-glass-gray-700 dark:text-dark-glass-gray-600">
+                  <span>Onboarding Health</span>
+                  <span class="text-glass-primary dark:text-dark-glass-primary">84%</span>
+                </div>
+                <div class="w-full bg-glass-gray-200 dark:bg-dark-glass-gray-200 rounded-full h-2 mt-2">
+                  <div class="bg-glass-primary dark:bg-dark-glass-primary h-2 rounded-full" style="width: 84%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm font-medium text-glass-gray-700 dark:text-dark-glass-gray-600">
+                  <span>Adoption Depth</span>
+                  <span class="text-glass-primary dark:text-dark-glass-primary">72%</span>
+                </div>
+                <div class="w-full bg-glass-gray-200 dark:bg-dark-glass-gray-200 rounded-full h-2 mt-2">
+                  <div class="bg-glass-primary/80 dark:bg-dark-glass-primary/80 h-2 rounded-full" style="width: 72%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm font-medium text-glass-gray-700 dark:text-dark-glass-gray-600">
+                  <span>Advocacy Readiness</span>
+                  <span class="text-glass-primary dark:text-dark-glass-primary">61%</span>
+                </div>
+                <div class="w-full bg-glass-gray-200 dark:bg-dark-glass-gray-200 rounded-full h-2 mt-2">
+                  <div class="bg-glass-primary/60 dark:bg-dark-glass-primary/60 h-2 rounded-full" style="width: 61%"></div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-3 pt-2">
+                <div class="rounded-lg bg-white/80 dark:bg-dark-glass-white/20 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 p-3 text-xs">
+                  <div class="font-semibold text-glass-gray-800 dark:text-dark-glass-gray-100">Signals / Month</div>
+                  <div class="mt-1 text-glass-primary dark:text-dark-glass-primary text-lg font-bold">1.3K</div>
+                </div>
+                <div class="rounded-lg bg-white/80 dark:bg-dark-glass-white/20 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 p-3 text-xs">
+                  <div class="font-semibold text-glass-gray-800 dark:text-dark-glass-gray-100">Auto Playbooks</div>
+                  <div class="mt-1 text-glass-primary dark:text-dark-glass-primary text-lg font-bold">12</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact & Results -->
+  <section id="impact" class="bg-glass-bg dark:bg-dark-glass-bg pb-16 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 leading-tight text-center">
+        Impact & Results
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="group bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-6 border border-glass-white/20 dark:border-dark-glass-white/20 shadow-soft hover:shadow-glass text-center transition-all duration-300">
+          <div class="text-2xl md:text-3xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-3">-45%</div>
+          <div class="text-sm font-sans font-medium text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Churn Reduction</div>
+          <div class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">From 8.2% to 4.5% monthly churn</div>
+        </div>
+        <div class="group bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-6 border border-glass-white/20 dark:border-dark-glass-white/20 shadow-soft hover:shadow-glass text-center transition-all duration-300">
+          <div class="text-2xl md:text-3xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-3">+35%</div>
+          <div class="text-sm font-sans font-medium text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">CSAT Improvement</div>
+          <div class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">CSAT rose from 71 → 96</div>
+        </div>
+        <div class="group bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-6 border border-glass-white/20 dark:border-dark-glass-white/20 shadow-soft hover:shadow-glass text-center transition-all duration-300">
+          <div class="text-2xl md:text-3xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-3">+60%</div>
+          <div class="text-sm font-sans font-medium text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Retention Lift</div>
+          <div class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">Active accounts after 6 months</div>
+        </div>
+      </div>
+
+      <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300 mb-12">
+        <h3 class="text-xl font-serif italic font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 text-center">Experience Performance Dashboard</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <h4 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">Before Optimization</h4>
+            <ul class="space-y-3 text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">
+              <li class="flex justify-between"><span>Time to First Value</span><span class="font-medium text-rose-500">14 days</span></li>
+              <li class="flex justify-between"><span>Accounts Requiring Reactive Saves</span><span class="font-medium text-rose-500">41%</span></li>
+              <li class="flex justify-between"><span>Average NPS</span><span class="font-medium text-rose-500">18</span></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">After Optimization</h4>
+            <ul class="space-y-3 text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">
+              <li class="flex justify-between"><span>Time to First Value</span><span class="font-medium text-emerald-500">7 days</span></li>
+              <li class="flex justify-between"><span>Accounts Requiring Reactive Saves</span><span class="font-medium text-emerald-500">18%</span></li>
+              <li class="flex justify-between"><span>Average NPS</span><span class="font-medium text-emerald-500">42</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300 mb-12">
+        <h3 class="text-xl font-serif italic font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 text-center">Additional Impact Metrics</h3>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+            <div class="text-2xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-2">78%</div>
+            <div class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Guided Onboarding Adoption</div>
+          </div>
+          <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+            <div class="text-2xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-2">3.5x</div>
+            <div class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Expansion Pipeline Velocity</div>
+          </div>
+          <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+            <div class="text-2xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-2">28%</div>
+            <div class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Increase in Active Champions</div>
+          </div>
+          <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+            <div class="text-2xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-2">-55%</div>
+            <div class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Support Escalations</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Learning & Testimonial -->
+  <section class="py-16 bg-glass-white dark:bg-dark-glass-white transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg rounded-glass p-8 md:p-10 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] items-start">
+          <div>
+            <span class="text-xs font-semibold tracking-[0.35em] uppercase text-glass-primary dark:text-dark-glass-primary">Key Learning</span>
+            <h3 class="mt-4 text-2xl md:text-3xl font-serif italic font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 leading-snug">
+              Customer success is a shared responsibility between product, marketing, and support—alignment unlocks durable retention
+            </h3>
+            <p class="mt-4 text-base md:text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">
+              When every team owned a slice of the journey, customers experienced the seams. Creating a shared journey model, clear swimlanes, and real-time feedback loops closed those gaps and made the experience feel orchestrated instead of improvised.
+            </p>
+            <div class="mt-6 grid gap-4 sm:grid-cols-3">
+              <div class="rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/30 dark:border-dark-glass-gray-200/30 p-4">
+                <div class="text-lg font-sans font-bold text-glass-primary dark:text-dark-glass-primary">-45%</div>
+                <div class="text-xs uppercase tracking-wide text-glass-gray-600 dark:text-dark-glass-gray-600">Churn</div>
+              </div>
+              <div class="rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/30 dark:border-dark-glass-gray-200/30 p-4">
+                <div class="text-lg font-sans font-bold text-glass-primary dark:text-dark-glass-primary">+35%</div>
+                <div class="text-xs uppercase tracking-wide text-glass-gray-600 dark:text-dark-glass-gray-600">Satisfaction</div>
+              </div>
+              <div class="rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/30 dark:border-dark-glass-gray-200/30 p-4">
+                <div class="text-lg font-sans font-bold text-glass-primary dark:text-dark-glass-primary">+60%</div>
+                <div class="text-xs uppercase tracking-wide text-glass-gray-600 dark:text-dark-glass-gray-600">Retention</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/60 dark:bg-dark-glass-white/40 rounded-glass-sm border border-glass-white/30 dark:border-dark-glass-white/20 p-6 md:p-8 shadow-soft">
+            <svg class="w-8 h-8 text-glass-primary/60 dark:text-dark-glass-primary/60" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <blockquote class="mt-4 text-base md:text-lg font-serif italic text-glass-gray-700 dark:text-dark-glass-gray-300 leading-relaxed">
+              "The personalized onboarding experience has completely transformed how our customers engage with our platform. Retention rates have never been higher."
+            </blockquote>
+            <div class="mt-6">
+              <div class="font-semibold text-glass-gray-900 dark:text-dark-glass-gray-100">Rachel Martinez</div>
+              <div class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-400">Head of Customer Success</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How I Did It -->
+  <section id="how-i-did-it" class="bg-glass-bg dark:bg-dark-glass-bg pb-16 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300">
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <span class="text-2xl" aria-hidden="true">⚡</span>
+          <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900">
+            How I Did It
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          <div class="flex items-start space-x-3">
+            <div class="w-2 h-2 rounded-full bg-glass-primary dark:bg-dark-glass-primary mt-2 flex-shrink-0"></div>
+            <p class="text-glass-gray-600 dark:text-dark-glass-gray-600">
+              <strong class="text-glass-gray-900 dark:text-dark-glass-gray-900">Conducted comprehensive customer journey mapping</strong> to surface qualitative pain points and quantify impact on churn.
+            </p>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-2 h-2 rounded-full bg-glass-primary dark:bg-dark-glass-primary mt-2 flex-shrink-0"></div>
+            <p class="text-glass-gray-600 dark:text-dark-glass-gray-600">
+              <strong class="text-glass-gray-900 dark:text-dark-glass-gray-900">Created 5 personalized onboarding flows</strong> aligned to user segments, roles, and desired outcomes.
+            </p>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-2 h-2 rounded-full bg-glass-primary dark:bg-dark-glass-primary mt-2 flex-shrink-0"></div>
+            <p class="text-glass-gray-600 dark:text-dark-glass-gray-600">
+              <strong class="text-glass-gray-900 dark:text-dark-glass-gray-900">Implemented 12 automated customer success touchpoints</strong> across onboarding, adoption, expansion, and renewal stages.
+            </p>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-2 h-2 rounded-full bg-glass-primary dark:bg-dark-glass-primary mt-2 flex-shrink-0"></div>
+            <p class="text-glass-gray-600 dark:text-dark-glass-gray-600">
+              <strong class="text-glass-gray-900 dark:text-dark-glass-gray-900">Developed a proactive intervention system</strong> that prioritized at-risk accounts and surfaced recommended actions instantly.
+            </p>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-2 h-2 rounded-full bg-glass-primary dark:bg-dark-glass-primary mt-2 flex-shrink-0"></div>
+            <p class="text-glass-gray-600 dark:text-dark-glass-gray-600">
+              <strong class="text-glass-gray-900 dark:text-dark-glass-gray-900">Established cross-functional collaboration rituals</strong> connecting product, marketing, and support around shared journey KPIs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-glass-bg dark:bg-dark-glass-bg text-center transition-colors duration-300 pt-16 pb-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300">
+        <h2 class="text-2xl md:text-3xl font-sans font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 leading-tight text-center">
+          Ready to Elevate Your Customer Journey?
+        </h2>
+        <p class="text-base md:text-lg font-serif italic text-glass-gray-600 dark:text-dark-glass-gray-600 mb-8 max-w-2xl mx-auto text-center">
+          Let's design the onboarding and lifecycle experiences that keep customers engaged, loyal, and expanding.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            class="group relative bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-sm font-medium transition-all duration-500 shadow-glass focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 flex items-center justify-center gap-2 overflow-hidden hover:shadow-xl hover:scale-105 hover:bg-white hover:text-glass-primary"
+            aria-label="Schedule a strategy consultation"
+          >
+            <span class="relative z-10 transition-colors duration-500">Schedule Strategy Call</span>
+            <span class="relative z-10 transition-colors duration-500" aria-hidden="true">⚡</span>
+            <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </a>
+          <a
+            href="/#case-studies"
+            class="group relative bg-glass-white/80 dark:bg-dark-glass-white/80 text-glass-primary dark:text-dark-glass-primary px-6 py-3 rounded-glass text-sm font-medium transition-all duration-500 shadow-glass border border-glass-primary/20 dark:border-dark-glass-primary/20 focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 flex items-center justify-center gap-2 hover:shadow-xl hover:scale-105"
+            aria-label="View more case studies"
+          >
+            <span class="transition-colors duration-500">View More Case Studies</span>
+            <span class="transition-colors duration-500" aria-hidden="true">📚</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

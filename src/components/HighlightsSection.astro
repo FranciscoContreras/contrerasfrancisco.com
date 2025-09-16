@@ -98,8 +98,8 @@
 
           <!-- Terminal Content -->
           <div class="font-mono text-sm text-glass-gray-800 dark:text-dark-glass-gray-200 space-y-1 transition-colors duration-300">
-            <div>&gt; launching francisco.exe...</div>
-            <div>&gt; loading growth modules...</div>
+            <div>&gt; launching francisco.exe v2...</div>
+            <div>&gt; loading growth_os, lifecycle_ai, revenue_ops...</div>
             <div>&gt; boot sequence complete.</div>
             <div class="pt-4"></div>
 
@@ -107,25 +107,109 @@
             <div>alias: "Franc"</div>
             <div>base: working globally</div>
             <div>mission: make products impossible to ignore</div>
-            <div>experience: 5+ yrs | AI, Customer Experience &amp; Automation</div>
-            <div>promoted: Marketing Specialist → Product Marketing Manager in 8 months</div>
+            <div>experience: 5+ yrs | AI, Lifecycle, RevOps | Specialist → PMM in 8 months</div>
             <div class="pt-2"></div>
 
-            <div>projects: AI Platform Launch ● E-commerce Automation ● SaaS Growth ● Customer Journey Optimization</div>
-            <div>skills_loaded: HubSpot Salesforce Mixpanel Figma SQL Analytics Automation</div>
-            <div>next_objective: Drive breakout growth for AI and automation products</div>
+            <div>projects_loaded: [ AI Platform Launch, E-commerce Automation, SaaS Growth, Journey Optimization ]</div>
+            <div>toolchain: growth = [ HubSpot, Salesforce, Braze ]; data = [ Mixpanel, PostHog, dbt ]; automation = [ Zapier, Make, Retool ]; builders = [ Webflow, Next.js, Astro ]; ai = [ GPT-4o, Claude, Perplexity ]</div>
+            <div>strengths: narrative architecture • experiment design • lifecycle systems • cross-functional orchestration</div>
+            <div>next_objective: Drive breakout growth for AI + automation products with obsessive customer insight</div>
             <div class="pt-6"></div>
 
             <div>&gt; type "start" to chat over coffee ☕</div>
             <div class="pt-4"></div>
 
-            <!-- Input field -->
-            <div class="border border-glass-gray-300 dark:border-dark-glass-gray-600 rounded-lg p-3 bg-white dark:bg-dark-glass-gray-700">
-              <span class="text-glass-gray-400 dark:text-dark-glass-gray-400">type 'start' to chat over coffee</span>
-            </div>
+            <!-- Interactive input -->
+            <form id="terminal-input-form" class="flex items-center border border-glass-gray-300 dark:border-dark-glass-gray-600 rounded-lg px-3 py-2 bg-white dark:bg-dark-glass-gray-700">
+              <span class="text-glass-gray-400 dark:text-dark-glass-gray-400 mr-3">&gt;</span>
+              <input
+                id="terminal-input"
+                type="text"
+                inputmode="text"
+                autocomplete="off"
+                placeholder="type start"
+                class="w-full bg-transparent text-glass-gray-700 dark:text-dark-glass-gray-100 placeholder-glass-gray-300 dark:placeholder-dark-glass-gray-400 focus:outline-none"
+                aria-label="Type start to book a coffee chat"
+              />
+            </form>
+            <div id="terminal-feedback" class="text-xs text-glass-primary dark:text-dark-glass-primary h-4"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('terminal-input-form');
+    const input = document.getElementById('terminal-input');
+    const feedback = document.getElementById('terminal-feedback');
+    let gameScriptLoaded = false;
+
+    if (!form || !input) return;
+
+    const handleStart = () => {
+      const target = document.querySelector('#contact') || document.querySelector('footer');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.location.href = '/contact';
+      }
+    };
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const value = input.value.trim().toLowerCase();
+      if (!value) {
+        if (feedback) feedback.textContent = '';
+        return;
+      }
+
+      if (value === 'start') {
+        if (feedback) {
+          feedback.textContent = 'launching coffee chat...';
+          setTimeout(() => (feedback.textContent = ''), 2500);
+        }
+        handleStart();
+      } else if (value === 'game' || value === 'gallaga') {
+        if (feedback) {
+          feedback.textContent = 'loading galaga.mini...';
+        }
+
+        const launchGame = () => {
+          if (feedback) {
+            feedback.textContent = '';
+          }
+          if (window.launchMiniGalaga) {
+            window.launchMiniGalaga();
+          }
+        };
+
+        if (gameScriptLoaded) {
+          launchGame();
+        } else {
+          const script = document.createElement('script');
+          script.src = '/scripts/galaga-mini.js';
+          script.async = true;
+          script.onload = () => {
+            gameScriptLoaded = true;
+            launchGame();
+          };
+          script.onerror = () => {
+            if (feedback) {
+              feedback.textContent = 'could not load mini-game. try again later.';
+              setTimeout(() => (feedback.textContent = ''), 2500);
+            }
+          };
+          document.body.appendChild(script);
+        }
+      } else if (feedback) {
+        feedback.textContent = "command not recognized. try 'start'.";
+        setTimeout(() => (feedback.textContent = ''), 2500);
+      }
+
+      input.value = '';
+    });
+  });
+</script>

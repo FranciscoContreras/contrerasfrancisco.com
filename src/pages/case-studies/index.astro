@@ -1,0 +1,190 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const caseStudies = [
+  {
+    slug: 'saas-platform-gtm',
+    category: 'AI Product Launch',
+    title: 'SaaS Platform Go-to-Market',
+    summary:
+      'Positioned an AI analytics startup and orchestrated a multi-channel launch that drove 300% user growth and $2.5M ARR in six months.',
+    highlights: [
+      'Defined ROI-centric positioning for mid-market buyers',
+      'Launched coordinated product, lifecycle, and sales motions',
+      'Built attribution and feedback loops to scale the playbook'
+    ],
+    metrics: [
+      { label: 'User Growth', value: '+300%' },
+      { label: 'ARR in 6 Months', value: '$2.5M' },
+      { label: 'Trial → Paid', value: '85%' }
+    ]
+  },
+  {
+    slug: 'ecommerce-automation',
+    category: 'Lifecycle Marketing',
+    title: 'E-commerce Automation',
+    summary:
+      'Reversed declining conversion with an automation-led lifecycle system that lifted revenue 180% and retention 65% for a DTC portfolio.',
+    highlights: [
+      'Segmented lifecycle and triggered dynamic product flows',
+      'Introduced experimentation muscle across key journeys',
+      'Tied retention programs directly to revenue reporting'
+    ],
+    metrics: [
+      { label: 'Revenue Lift', value: '+180%' },
+      { label: 'Retention', value: '+65%' },
+      { label: 'CAC Reduction', value: '40%' }
+    ]
+  },
+  {
+    slug: 'marketing-workflow-automation',
+    category: 'Automation Ops',
+    title: 'Marketing Workflow Automation',
+    summary:
+      'Eliminated 70% of manual work for a B2B marketing team by unifying CRM, automation, and AI-powered lead scoring.',
+    highlights: [
+      'Mapped every workflow and prioritized automation ROI',
+      'Built intelligent lead scoring and nurture programs',
+      'Enabled real-time reporting and optimization loops'
+    ],
+    metrics: [
+      { label: 'Manual Work', value: '-70%' },
+      { label: 'Lead Quality', value: '+40%' },
+      { label: 'Response Time', value: '+85%' }
+    ]
+  },
+  {
+    slug: 'customer-journey-optimization',
+    category: 'Customer Experience',
+    title: 'Customer Journey Optimization',
+    summary:
+      'Reimagined onboarding and success for a SaaS platform, cutting churn 45% while boosting satisfaction and retention.',
+    highlights: [
+      'Unified product, marketing, and success around shared journey data',
+      'Launched segmented onboarding and proactive playbooks',
+      'Instrumented health scoring to surface expansion signals'
+    ],
+    metrics: [
+      { label: 'Churn', value: '-45%' },
+      { label: 'Satisfaction', value: '+35%' },
+      { label: 'Retention', value: '+60%' }
+    ]
+  }
+];
+---
+
+<Layout title="Case Studies - Francisco Contreras">
+  <Navigation />
+
+  <main class="bg-glass-bg dark:bg-dark-glass-bg transition-colors duration-300">
+    <section class="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto text-center">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg text-xs font-semibold uppercase tracking-[0.3em] text-glass-gray-600 dark:text-dark-glass-gray-600 border border-glass-white/20 dark:border-dark-glass-white/20 mb-6">
+          selected engagements
+        </span>
+        <h1 class="text-3xl md:text-4xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 leading-tight mb-4">
+          Building growth systems for AI, lifecycle, and customer experience teams.
+        </h1>
+        <p class="text-base md:text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 max-w-3xl mx-auto">
+          A look into the product launches, lifecycle revamps, and automation programs I have led—combining positioning, revenue ops, and cross-functional execution.
+        </p>
+      </div>
+    </section>
+
+    <section class="pb-24 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto grid gap-8 lg:gap-10 md:grid-cols-2">
+        {caseStudies.map((study) => (
+          <article class="group bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-xl rounded-glass p-8 md:p-10 shadow-soft border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-500 hover:-translate-y-1 hover:shadow-glass">
+            <div class="flex items-start justify-between mb-6">
+              <div>
+                <span class="inline-flex items-center px-3 py-1 rounded-full bg-glass-white/70 dark:bg-dark-glass-white/40 text-xs font-semibold uppercase tracking-[0.3em] text-glass-gray-600 dark:text-dark-glass-gray-500 border border-glass-white/20 dark:border-dark-glass-white/20">
+                  {study.category}
+                </span>
+                <h2 class="mt-4 text-xl md:text-2xl font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">
+                  {study.title}
+                </h2>
+              </div>
+              <a
+                href={`/case-studies/${study.slug}`}
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-glass-primary/15 dark:bg-dark-glass-primary/15 text-glass-primary dark:text-dark-glass-primary hover:bg-glass-primary/25 dark:hover:bg-dark-glass-primary/25 transition-colors"
+                aria-label={`View ${study.title} case study`}
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+            <p class="text-sm md:text-base text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed mb-6">
+              {study.summary}
+            </p>
+            <div class="mb-6 space-y-3">
+              {study.highlights.map((point) => (
+                <div class="flex items-start space-x-3">
+                  <span class="mt-1 w-1.5 h-1.5 rounded-full bg-glass-primary dark:bg-dark-glass-primary"></span>
+                  <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600 leading-relaxed">{point}</p>
+                </div>
+              ))}
+            </div>
+            <div class="border-t border-glass-white/30 dark:border-dark-glass-white/20 pt-4 flex flex-wrap gap-4">
+              {study.metrics.map((metric) => (
+                <div class="text-left">
+                  <p class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">
+                    {metric.value}
+                  </p>
+                  <p class="text-xs uppercase tracking-[0.25em] text-glass-gray-500 dark:text-dark-glass-gray-500">
+                    {metric.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div class="mt-6">
+              <a
+                href={`/case-studies/${study.slug}`}
+                class="inline-flex items-center gap-2 text-sm font-medium text-glass-primary dark:text-dark-glass-primary hover:text-glass-primary-dark dark:hover:text-dark-glass-primary-dark transition-colors"
+              >
+                View full story
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="pb-24 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto text-center bg-glass-white/80 dark:bg-dark-glass-white/80 backdrop-blur-xl rounded-glass p-8 md:p-12 shadow-soft border border-glass-white/20 dark:border-dark-glass-white/20">
+        <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">
+          Have a growth or lifecycle challenge on deck?
+        </h2>
+        <p class="text-base md:text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 mb-6">
+          I partner with teams to design go-to-market launches, automate revenue engines, and build the analytics muscle to sustain them.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            class="group relative bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-sm font-medium transition-all duration-500 shadow-glass focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 inline-flex items-center gap-2 overflow-hidden hover:shadow-xl hover:scale-105 hover:bg-white hover:text-glass-primary"
+          >
+            <span class="relative z-10 transition-colors duration-500">Book a working session</span>
+            <span aria-hidden="true" class="relative z-10 transition-colors duration-500">⚡</span>
+            <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </a>
+          <a
+            href="/resources"
+            class="inline-flex items-center gap-2 text-sm font-medium text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors"
+          >
+            Explore tools & playbooks
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-10 10-4-4-6 6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
