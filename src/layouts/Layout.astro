@@ -4,13 +4,129 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
+const siteUrl = 'https://contrerasfrancisco.com';
+const metaDescription = 'Francisco Contreras - Product Marketing Manager specializing in AI, automation, and customer experience. High-energy marketing strategist with proven results in early-stage tech companies.';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: siteUrl,
+      name: 'Francisco Contreras',
+      description: metaDescription,
+      inLanguage: 'en-US',
+      publisher: {
+        '@id': `${siteUrl}/#organization`
+      }
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${siteUrl}/#webpage`,
+      url: siteUrl,
+      name: title,
+      isPartOf: {
+        '@id': `${siteUrl}/#website`
+      },
+      description: metaDescription,
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/images/francisco-profile-1200.jpg`
+      },
+      breadcrumb: {
+        '@id': `${siteUrl}/#breadcrumb`
+      },
+      inLanguage: 'en-US',
+      mainEntity: {
+        '@id': `${siteUrl}/#person`
+      }
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${siteUrl}/#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: siteUrl
+        }
+      ]
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: 'Francisco Contreras Consulting',
+      url: siteUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/logo/Francisco-animated.svg`,
+        width: 156,
+        height: 24
+      },
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          email: 'mailto:contrerasfrancisco@icloud.com',
+          contactType: 'customer support',
+          areaServed: 'Global',
+          availableLanguage: ['English', 'Spanish']
+        }
+      ],
+      founder: {
+        '@id': `${siteUrl}/#person`
+      }
+    },
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/#person`,
+      name: 'Francisco Contreras',
+      givenName: 'Francisco',
+      familyName: 'Contreras',
+      alternateName: 'Franc',
+      jobTitle: 'Product Marketing Manager',
+      description: metaDescription,
+      url: siteUrl,
+      email: 'mailto:contrerasfrancisco@icloud.com',
+      image: `${siteUrl}/images/francisco-profile-1200.jpg`,
+      sameAs: ['https://www.linkedin.com/in/contreras-francisco/'],
+      worksFor: {
+        '@id': `${siteUrl}/#organization`
+      },
+      knowsAbout: ['Product Marketing', 'AI', 'Automation', 'Customer Experience', 'SaaS', 'Growth Marketing'],
+      knowsLanguage: ['English', 'Spanish'],
+      brand: {
+        '@id': `${siteUrl}/#organization`
+      }
+    },
+    {
+      '@type': 'Service',
+      '@id': `${siteUrl}/#services`,
+      name: 'Product Marketing & Automation Consulting',
+      description: 'Strategic go-to-market planning, marketing workflow automation, customer journey optimization, and AI-driven growth experimentation for B2B software teams.',
+      provider: {
+        '@id': `${siteUrl}/#organization`
+      },
+      areaServed: 'Global',
+      serviceType: ['Go-to-market strategy', 'Marketing automation', 'Customer journey optimization', 'Product marketing consulting'],
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock'
+      }
+    }
+  ]
+};
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth bg-glass-bg dark:bg-dark-glass-bg">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Francisco Contreras - Product Marketing Manager specializing in AI, automation, and customer experience. High-energy marketing strategist with proven results in early-stage tech companies." />
+    <meta name="description" content={metaDescription} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Francisco Contreras" />
@@ -21,43 +137,18 @@ const { title } = Astro.props;
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://contrerasfrancisco.com/" />
     <meta property="og:title" content="{title}" />
-    <meta property="og:description" content="Francisco Contreras - Product Marketing Manager specializing in AI, automation, and customer experience." />
+    <meta property="og:description" content={metaDescription} />
     <meta property="og:image" content="https://contrerasfrancisco.com/images/francisco-profile-1200.jpg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://contrerasfrancisco.com/" />
     <meta property="twitter:title" content="{title}" />
-    <meta property="twitter:description" content="Francisco Contreras - Product Marketing Manager specializing in AI, automation, and customer experience." />
+    <meta property="twitter:description" content={metaDescription} />
     <meta property="twitter:image" content="https://contrerasfrancisco.com/images/francisco-profile-1200.jpg" />
 
     <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Francisco Contreras",
-      "jobTitle": "Product Marketing Manager",
-      "description": "Product Marketing Manager specializing in AI, automation, and customer experience",
-      "url": "https://contrerasfrancisco.com",
-      "image": "https://contrerasfrancisco.com/images/francisco-profile-1200.jpg",
-      "sameAs": [
-        "https://linkedin.com/in/francisco-contreras"
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance"
-      },
-      "knowsAbout": [
-        "Product Marketing",
-        "AI",
-        "Automation",
-        "Customer Experience",
-        "SaaS",
-        "Growth Marketing"
-      ]
-    }
-    </script>
+    <script type="application/ld+json">{JSON.stringify(jsonLd, null, 2)}</script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
