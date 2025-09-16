@@ -1,0 +1,609 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Marketing Workflow Automation Case Study - Francisco">
+  <Navigation />
+
+  <!-- Hero Section -->
+  <section class="bg-glass-bg dark:bg-dark-glass-bg pt-32 pb-8 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <div class="flex text-sm text-glass-gray-500 dark:text-dark-glass-gray-500">
+          <a href="/" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Home</a>
+          <span class="mx-2">/</span>
+          <a href="/#case-studies" class="hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">Case Studies</a>
+          <span class="mx-2">/</span>
+          <span class="text-glass-gray-700 dark:text-dark-glass-gray-700">Marketing Workflow Automation</span>
+        </div>
+      </nav>
+
+      <!-- Hero Content -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center px-3 py-1 rounded-full bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary text-sm font-medium mb-6">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+            </svg>
+            Automation Case Study
+          </div>
+
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4 leading-tight">
+            Marketing Workflow
+            <span class="text-glass-primary dark:text-dark-glass-primary">Automation</span>
+          </h1>
+
+          <p class="text-lg font-sans text-glass-gray-600 dark:text-dark-glass-gray-600 mb-6 leading-relaxed max-w-2xl">
+            How we eliminated 70% of manual marketing tasks while improving lead quality by 40% and response times by 85% through intelligent workflow automation.
+          </p>
+
+          <!-- Key Metrics Preview -->
+          <div class="grid grid-cols-3 gap-3 mb-6">
+            <div class="text-center p-3 bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20">
+              <div class="text-xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary">-70%</div>
+              <div class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">Manual Work</div>
+            </div>
+            <div class="text-center p-3 bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20">
+              <div class="text-xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary">+40%</div>
+              <div class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">Lead Quality</div>
+            </div>
+            <div class="text-center p-3 bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20">
+              <div class="text-xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary">+85%</div>
+              <div class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">Response Time</div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#detailed-analysis" class="group relative bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-sm font-medium transition-all duration-500 shadow-glass focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 overflow-hidden hover:shadow-xl hover:scale-105 hover:bg-white hover:text-glass-primary">
+              <span class="relative z-10 transition-colors duration-500">View Full Analysis</span>
+              <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </a>
+            <a href="#methodology" class="border border-glass-gray-300 dark:border-dark-glass-gray-300 text-glass-gray-700 dark:text-dark-glass-gray-700 px-6 py-3 rounded-glass text-sm font-medium hover:bg-glass-gray-50 dark:hover:bg-dark-glass-gray-50 transition-all duration-300 text-center">
+              See Methodology
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="relative">
+          <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+            <!-- Mock Automation Dashboard -->
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <h3 class="font-semibold text-glass-gray-800 dark:text-dark-glass-gray-800">Automation Dashboard</h3>
+                <div class="flex space-x-2">
+                  <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                  <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                  <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Mock Workflow Status -->
+              <div class="bg-glass-gray-50 dark:bg-dark-glass-gray-50 rounded-lg p-4 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Lead Scoring</span>
+                  <div class="flex items-center space-x-2">
+                    <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                    <span class="text-xs text-green-600 dark:text-green-400">Active</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Nurture Campaign</span>
+                  <div class="flex items-center space-x-2">
+                    <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                    <span class="text-xs text-green-600 dark:text-green-400">Active</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Follow-up Sequences</span>
+                  <div class="flex items-center space-x-2">
+                    <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                    <span class="text-xs text-green-600 dark:text-green-400">Active</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mock Metrics -->
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-glass-gray-100 dark:bg-dark-glass-gray-100 rounded p-2">
+                  <div class="text-sm font-semibold text-glass-gray-800 dark:text-dark-glass-gray-800">Workflows</div>
+                  <div class="text-lg font-bold text-glass-primary dark:text-dark-glass-primary">8 Active</div>
+                </div>
+                <div class="bg-glass-gray-100 dark:bg-dark-glass-gray-100 rounded p-2">
+                  <div class="text-sm font-semibold text-glass-gray-800 dark:text-dark-glass-gray-800">Lead Score</div>
+                  <div class="text-lg font-bold text-glass-primary dark:text-dark-glass-primary">92/100</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Challenge -->
+  <section class="bg-glass-bg dark:bg-dark-glass-bg pt-4 pb-16 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300">
+          <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 leading-tight text-center">
+            The Challenge
+          </h2>
+          <p class="text-base md:text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 mb-6 text-center max-w-3xl mx-auto">
+            The marketing team was drowning in manual tasks, spending 80% of their time on repetitive work instead of strategic initiatives. Lead response times were inconsistent, and quality leads were getting lost in the process.
+          </p>
+
+          <!-- Challenge Metrics -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-red-50 dark:bg-red-900/20 rounded-glass-sm p-4 border border-red-200/20 dark:border-red-800/20">
+              <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Inefficient Processes</h4>
+              <ul class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600 space-y-1">
+                <li>• 6+ hours daily on manual lead qualification</li>
+                <li>• Inconsistent follow-up timing and messaging</li>
+                <li>• No automated lead scoring or prioritization</li>
+              </ul>
+            </div>
+            <div class="bg-orange-50 dark:bg-orange-900/20 rounded-glass-sm p-4 border border-orange-200/20 dark:border-orange-800/20">
+              <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Poor Lead Management</h4>
+              <ul class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600 space-y-1">
+                <li>• 48-hour average response time to new leads</li>
+                <li>• 35% lead qualification accuracy</li>
+                <li>• High-value prospects falling through cracks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategic Approach -->
+  <section class="bg-glass-bg dark:bg-dark-glass-bg pb-16 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 leading-tight text-center">
+          Strategic Approach
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div class="text-center">
+            <div class="w-12 h-12 bg-glass-primary/10 dark:bg-dark-glass-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-6 h-6 text-glass-primary dark:text-dark-glass-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">Process Mapping</h3>
+            <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Documented existing workflows to identify automation opportunities</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-12 h-12 bg-glass-primary/10 dark:bg-dark-glass-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-6 h-6 text-glass-primary dark:text-dark-glass-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">System Integration</h3>
+            <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Connected CRM with marketing automation platform for seamless data flow</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-12 h-12 bg-glass-primary/10 dark:bg-dark-glass-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-6 h-6 text-glass-primary dark:text-dark-glass-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-3">AI-Powered Scoring</h3>
+            <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Implemented intelligent lead scoring based on behavior and demographics</p>
+          </div>
+        </div>
+
+        <!-- Implementation Timeline -->
+        <h3 class="text-xl font-serif italic font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 text-center">Implementation Timeline</h3>
+
+        <div class="relative">
+          <!-- Timeline Line -->
+          <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-glass-gray-300 dark:bg-dark-glass-gray-300"></div>
+
+          <!-- Timeline Items -->
+          <div class="space-y-8">
+            <!-- Phase 1 -->
+            <div class="relative flex items-start space-x-4">
+              <div class="w-8 h-8 bg-glass-primary dark:bg-dark-glass-primary rounded-full flex items-center justify-center text-white dark:text-black text-sm font-bold relative z-10">1</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center space-x-3 mb-2">
+                  <h4 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Process Audit & Mapping</h4>
+                  <span class="text-sm text-glass-gray-500 dark:text-dark-glass-gray-500">Week 1</span>
+                </div>
+                <p class="text-glass-gray-600 dark:text-dark-glass-gray-600 mb-3">Comprehensive analysis of existing marketing workflows and identification of automation opportunities.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Workflow Analysis</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Pain Point Identification</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">ROI Calculation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="relative flex items-start space-x-4">
+              <div class="w-8 h-8 bg-glass-primary dark:bg-dark-glass-primary rounded-full flex items-center justify-center text-white dark:text-black text-sm font-bold relative z-10">2</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center space-x-3 mb-2">
+                  <h4 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">System Integration</h4>
+                  <span class="text-sm text-glass-gray-500 dark:text-dark-glass-gray-500">Weeks 2-3</span>
+                </div>
+                <p class="text-glass-gray-600 dark:text-dark-glass-gray-600 mb-3">Connected CRM with marketing automation platform and established data synchronization protocols.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">CRM Integration</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Data Mapping</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">API Setup</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="relative flex items-start space-x-4">
+              <div class="w-8 h-8 bg-glass-primary dark:bg-dark-glass-primary rounded-full flex items-center justify-center text-white dark:text-black text-sm font-bold relative z-10">3</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center space-x-3 mb-2">
+                  <h4 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Workflow Creation</h4>
+                  <span class="text-sm text-glass-gray-500 dark:text-dark-glass-gray-500">Weeks 4-6</span>
+                </div>
+                <p class="text-glass-gray-600 dark:text-dark-glass-gray-600 mb-3">Built and tested 8 automated workflows covering the entire customer journey from lead capture to conversion.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Lead Scoring</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Nurture Campaigns</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Follow-up Sequences</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="relative flex items-start space-x-4">
+              <div class="w-8 h-8 bg-glass-primary dark:bg-dark-glass-primary rounded-full flex items-center justify-center text-white dark:text-black text-sm font-bold relative z-10">4</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center space-x-3 mb-2">
+                  <h4 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Optimization & Reporting</h4>
+                  <span class="text-sm text-glass-gray-500 dark:text-dark-glass-gray-500">Weeks 7-8</span>
+                </div>
+                <p class="text-glass-gray-600 dark:text-dark-glass-gray-600 mb-3">Implemented comprehensive reporting dashboard and established continuous optimization protocols.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Analytics Setup</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Performance Tracking</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-glass-primary/10 dark:bg-dark-glass-primary/10 text-glass-primary dark:text-dark-glass-primary">Team Training</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Execution Details -->
+  <section class="bg-glass-bg dark:bg-dark-glass-bg pb-16 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 leading-tight text-center">
+          Automation Framework
+        </h2>
+
+        <!-- Workflow Automation -->
+        <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300 mb-12">
+          <h3 class="text-xl font-serif italic font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 text-center">8 Automated Workflows</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+              <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Lead Scoring</h4>
+              <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">AI-powered qualification</p>
+            </div>
+            <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+              <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Welcome Series</h4>
+              <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">New lead onboarding</p>
+            </div>
+            <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+              <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Nurture Campaign</h4>
+              <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Educational content delivery</p>
+            </div>
+            <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+              <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Demo Requests</h4>
+              <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Instant response system</p>
+            </div>
+            <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+              <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Re-engagement</h4>
+              <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Dormant lead activation</p>
+            </div>
+            <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+              <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Event Follow-up</h4>
+              <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Post-event engagement</p>
+            </div>
+            <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+              <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Sales Handoff</h4>
+              <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Qualified lead transfer</p>
+            </div>
+            <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+              <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Customer Success</h4>
+              <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Post-conversion onboarding</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lead Scoring Matrix -->
+        <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300 mb-12">
+          <h3 class="text-xl font-serif italic font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 text-center">AI-Powered Lead Scoring</h3>
+
+          <div class="space-y-6">
+            <div class="flex items-center justify-between p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20">
+              <div>
+                <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Behavioral Indicators</h4>
+                <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Page views, content downloads, email engagement</p>
+              </div>
+              <div class="text-right">
+                <div class="text-lg font-sans font-bold text-glass-primary dark:text-dark-glass-primary">40%</div>
+                <div class="text-xs text-glass-gray-500 dark:text-dark-glass-gray-500">Weight</div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20">
+              <div>
+                <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Demographic Data</h4>
+                <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Company size, industry, job title, location</p>
+              </div>
+              <div class="text-right">
+                <div class="text-lg font-sans font-bold text-glass-primary dark:text-dark-glass-primary">35%</div>
+                <div class="text-xs text-glass-gray-500 dark:text-dark-glass-gray-500">Weight</div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20">
+              <div>
+                <h4 class="font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Intent Signals</h4>
+                <p class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Demo requests, pricing page visits, contact form</p>
+              </div>
+              <div class="text-right">
+                <div class="text-lg font-sans font-bold text-glass-primary dark:text-dark-glass-primary">25%</div>
+                <div class="text-xs text-glass-gray-500 dark:text-dark-glass-gray-500">Weight</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="bg-glass-bg dark:bg-dark-glass-bg pb-16 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 leading-tight text-center">
+          Impact & Results
+        </h2>
+
+        <!-- Key Metrics -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div class="group bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-6 border border-glass-white/20 dark:border-dark-glass-white/20 shadow-soft hover:shadow-glass text-center transition-all duration-300">
+            <div class="text-2xl md:text-3xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-3">-70%</div>
+            <div class="text-sm font-sans font-medium text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Manual Work Reduction</div>
+            <div class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">From 6+ hours to 2 hours daily</div>
+          </div>
+          <div class="group bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-6 border border-glass-white/20 dark:border-dark-glass-white/20 shadow-soft hover:shadow-glass text-center transition-all duration-300">
+            <div class="text-2xl md:text-3xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-3">+40%</div>
+            <div class="text-sm font-sans font-medium text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Lead Quality Improvement</div>
+            <div class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">Better qualification accuracy</div>
+          </div>
+          <div class="group bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-6 border border-glass-white/20 dark:border-dark-glass-white/20 shadow-soft hover:shadow-glass text-center transition-all duration-300">
+            <div class="text-2xl md:text-3xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-3">+85%</div>
+            <div class="text-sm font-sans font-medium text-glass-gray-900 dark:text-dark-glass-gray-900 mb-2">Faster Response Time</div>
+            <div class="text-xs text-glass-gray-600 dark:text-dark-glass-gray-600">From 48 hours to 5 minutes</div>
+          </div>
+        </div>
+
+        <!-- Performance Chart -->
+        <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300 mb-12">
+          <h3 class="text-xl font-serif italic font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 text-center">Workflow Performance Metrics</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">Before Automation</h4>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Lead Response Time</span>
+                  <span class="text-sm font-medium text-red-600 dark:text-red-400">48 hours</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Manual Work Hours</span>
+                  <span class="text-sm font-medium text-red-600 dark:text-red-400">6+ hours/day</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Lead Qualification Accuracy</span>
+                  <span class="text-sm font-medium text-red-600 dark:text-red-400">35%</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-lg font-sans font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">After Automation</h4>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Lead Response Time</span>
+                  <span class="text-sm font-medium text-green-600 dark:text-green-400">5 minutes</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Manual Work Hours</span>
+                  <span class="text-sm font-medium text-green-600 dark:text-green-400">2 hours/day</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Lead Qualification Accuracy</span>
+                  <span class="text-sm font-medium text-green-600 dark:text-green-400">75%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Metrics -->
+        <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300 mb-12">
+          <h3 class="text-xl font-serif italic font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 text-center">Secondary Impact Metrics</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+              <div class="text-2xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-2">92%</div>
+              <div class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Lead Score Accuracy</div>
+            </div>
+            <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+              <div class="text-2xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-2">3x</div>
+              <div class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Lead Volume Handled</div>
+            </div>
+            <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+              <div class="text-2xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-2">65%</div>
+              <div class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Team Satisfaction</div>
+            </div>
+            <div class="text-center p-4 rounded-glass-sm bg-glass-gray-50 dark:bg-dark-glass-gray-50 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300">
+              <div class="text-2xl font-sans font-bold text-glass-primary dark:text-dark-glass-primary mb-2">$180K</div>
+              <div class="text-sm text-glass-gray-600 dark:text-dark-glass-gray-600">Annual Time Savings Value</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Learning -->
+  <section class="py-12 bg-glass-white dark:bg-dark-glass-white transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4 leading-tight">
+          Key Learning
+        </h2>
+        <p class="text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 max-w-3xl mx-auto">
+          The most important insight from this automation project that applies to any marketing workflow transformation.
+        </p>
+      </div>
+
+      <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 border border-glass-gray-200/20 dark:border-dark-glass-gray-200/20 shadow-soft hover:shadow-glass transition-all duration-300 text-center">
+        <div class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-yellow-600 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl md:text-2xl font-serif italic font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-4">
+          Successful automation requires clear workflow mapping and continuous optimization
+        </h3>
+        <p class="text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 max-w-3xl mx-auto">
+          The key to automation success isn't just implementing technology—it's understanding every step of your existing processes first. Our 70% efficiency gain came from meticulous workflow mapping, identifying the right automation triggers, and establishing feedback loops for continuous improvement. Without this foundation, automation often creates more problems than it solves.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="bg-glass-bg dark:bg-dark-glass-bg pb-16 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300 text-center">
+        <div class="w-12 h-12 bg-glass-primary/10 dark:bg-dark-glass-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-6 h-6 text-glass-primary dark:text-dark-glass-primary" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+          </svg>
+        </div>
+
+        <blockquote class="text-lg md:text-xl font-serif italic text-glass-gray-700 dark:text-dark-glass-gray-700 mb-6 max-w-3xl mx-auto">
+          "The automation workflows have transformed our lead management process. We're now handling 3x more leads with the same team size."
+        </blockquote>
+
+        <div class="flex items-center justify-center space-x-4">
+          <div class="w-12 h-12 bg-glass-gray-200 dark:bg-dark-glass-gray-200 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-glass-gray-600 dark:text-dark-glass-gray-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <div class="text-left">
+            <div class="font-semibold text-glass-gray-900 dark:text-dark-glass-gray-900">Lisa Park</div>
+            <div class="text-glass-gray-600 dark:text-dark-glass-gray-600">Marketing Operations Manager</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How I Did It -->
+  <section class="bg-glass-bg dark:bg-dark-glass-bg pb-16 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300">
+          <div class="flex items-center justify-center gap-3 mb-6">
+            <span class="text-2xl" aria-hidden="true">⚡</span>
+            <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900">
+              How I Did It
+            </h2>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 rounded-full bg-glass-primary dark:bg-dark-glass-primary mt-2 flex-shrink-0"></div>
+              <p class="text-glass-gray-600 dark:text-dark-glass-gray-600">
+                <strong class="text-glass-gray-900 dark:text-dark-glass-gray-900">Mapped existing manual processes</strong> to identify automation opportunities and calculate potential ROI for each workflow transformation
+              </p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 rounded-full bg-glass-primary dark:bg-dark-glass-primary mt-2 flex-shrink-0"></div>
+              <p class="text-glass-gray-600 dark:text-dark-glass-gray-600">
+                <strong class="text-glass-gray-900 dark:text-dark-glass-gray-900">Integrated CRM system with marketing automation platform</strong> for seamless data flow and unified lead management across all touchpoints
+              </p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 rounded-full bg-glass-primary dark:bg-dark-glass-primary mt-2 flex-shrink-0"></div>
+              <p class="text-glass-gray-600 dark:text-dark-glass-gray-600">
+                <strong class="text-glass-gray-900 dark:text-dark-glass-gray-900">Created 8 automated workflows</strong> handling different stages of the customer journey from initial lead capture to conversion and onboarding
+              </p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 rounded-full bg-glass-primary dark:bg-dark-glass-primary mt-2 flex-shrink-0"></div>
+              <p class="text-glass-gray-600 dark:text-dark-glass-gray-600">
+                <strong class="text-glass-gray-900 dark:text-dark-glass-gray-900">Implemented AI-powered lead scoring</strong> based on behavioral and demographic data to automatically prioritize high-value prospects
+              </p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 rounded-full bg-glass-primary dark:bg-dark-glass-primary mt-2 flex-shrink-0"></div>
+              <p class="text-glass-gray-600 dark:text-dark-glass-gray-600">
+                <strong class="text-glass-gray-900 dark:text-dark-glass-gray-900">Set up comprehensive reporting dashboard</strong> for continuous optimization and performance tracking across all automated workflows
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-glass-bg dark:bg-dark-glass-bg text-center transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass p-8 md:p-12 shadow-soft hover:shadow-glass border border-glass-white/20 dark:border-dark-glass-white/20 transition-all duration-300">
+          <h2 class="text-2xl md:text-3xl font-serif italic font-bold text-glass-gray-900 dark:text-dark-glass-gray-900 mb-8 leading-tight text-center">
+            Ready to Automate Your Marketing Workflows?
+          </h2>
+          <p class="text-base md:text-lg text-glass-gray-600 dark:text-dark-glass-gray-600 mb-8 max-w-2xl mx-auto text-center">
+            Let's discuss how intelligent automation can eliminate manual tasks and accelerate your marketing performance.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              class="group relative bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-sm font-medium transition-all duration-500 shadow-glass focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 flex items-center justify-center gap-2 overflow-hidden hover:shadow-xl hover:scale-105 hover:bg-white hover:text-glass-primary"
+              aria-label="Schedule a strategy consultation"
+            >
+              <span class="relative z-10 transition-colors duration-500">Schedule Strategy Call</span>
+              <span class="relative z-10 transition-colors duration-500" aria-hidden="true">⚡</span>
+              <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </a>
+            <a
+              href="/"
+              class="group relative bg-glass-white/80 dark:bg-dark-glass-white/80 text-glass-primary dark:text-dark-glass-primary px-6 py-3 rounded-glass text-sm font-medium transition-all duration-500 shadow-glass border border-glass-primary/20 dark:border-dark-glass-primary/20 focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 flex items-center justify-center gap-2 hover:shadow-xl hover:scale-105"
+              aria-label="View more case studies"
+            >
+              <span class="transition-colors duration-500">View More Case Studies</span>
+              <span class="transition-colors duration-500" aria-hidden="true">📚</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>
