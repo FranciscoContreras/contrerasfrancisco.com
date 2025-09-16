@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import enhanceContactFormScript from '../scripts/enhanceContactForm.ts?url';
 ---
 
 <Layout title="Contact - Francisco Contreras">
@@ -28,7 +29,7 @@ import Footer from '../components/Footer.astro';
           <div>
             <h2 class="text-2xl md:text-3xl font-bold text-glass-gray-800 dark:text-dark-glass-gray-800 mb-6 transition-colors duration-300">Send a Message</h2>
 
-            <form class="space-y-6">
+            <form class="space-y-6" data-contact-form data-success-message="Thanks for reaching out—expect a reply within one business day." novalidate>
               <!-- Name -->
               <div>
                 <label for="name" class="block text-sm font-medium text-glass-gray-700 dark:text-dark-glass-gray-700 mb-2 transition-colors duration-300">Name</label>
@@ -77,10 +78,15 @@ import Footer from '../components/Footer.astro';
               </div>
 
               <!-- Submit Button -->
-              <button type="submit"
-                class="w-full bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-sm font-semibold hover:bg-glass-primary-dark dark:hover:bg-dark-glass-primary-dark transition-all duration-300 shadow-soft hover:shadow-glass">
-                Send Message
+              <button type="submit" data-contact-submit
+                class="w-full bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-sm font-semibold transition-all duration-300 shadow-soft hover:shadow-glass hover:scale-[1.01]">
+                <span data-state="default">Send message</span>
+                <span data-state="loading" class="hidden">Sending…</span>
               </button>
+              <p class="text-xs text-glass-gray-500 dark:text-dark-glass-gray-500 mt-3">Prefer email? Reach me at
+                <a href="mailto:contrerasfrancisco@icloud.com" class="font-medium text-glass-primary dark:text-dark-glass-primary hover:underline">contrerasfrancisco@icloud.com</a>.
+              </p>
+              <div data-contact-feedback class="hidden rounded-glass px-4 py-3 text-sm font-medium" role="status" aria-live="polite"></div>
             </form>
           </div>
 
@@ -217,3 +223,5 @@ import Footer from '../components/Footer.astro';
   </main>
   <Footer />
 </Layout>
+
+<script type="module" src={enhanceContactFormScript}></script>

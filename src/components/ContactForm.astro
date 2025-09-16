@@ -1,74 +1,278 @@
 ---
-// Contact form with liquid glass aesthetic
+import enhanceContactFormScript from '../scripts/enhanceContactForm.ts?url';
+
+interface Props {
+  variant?: 'full' | 'cal-only';
+}
+
+const { variant = 'full' } = Astro.props as Props;
+const showForm = variant !== 'cal-only';
 ---
 
-<section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+<section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-glass-gray-800 dark:text-dark-glass-gray-800 transition-colors duration-300 leading-tight">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-sans font-semibold tracking-tight text-glass-gray-800 dark:text-dark-glass-gray-800 transition-colors duration-300 leading-tight">
         Your product deserves traction.
       </h2>
-      <p class="text-xl md:text-2xl font-serif italic text-glass-gray-600 dark:text-dark-glass-gray-600 mt-2 transition-colors duration-300">
+      <p class="text-lg md:text-xl font-serif italic text-glass-gray-600 dark:text-dark-glass-gray-600 mt-1 transition-colors duration-300">
         Let's make it happen.
       </p>
     </div>
 
-    <!-- Cal.com Embed with Contact Links -->
-    <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass overflow-hidden shadow-soft hover:shadow-glass transition-all duration-300">
-      <!-- Cal inline embed code begins -->
-      <div style="width:100%;height:600px;overflow:scroll" id="my-cal-inline-meet"></div>
-      <script type="text/javascript">
-        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-      Cal("init", "meet", {origin:"https://app.cal.com"});
+    {showForm ? (
+      <div class="grid gap-8 lg:grid-cols-[1.05fr,0.95fr] items-start">
+        <div class="bg-glass-white/70 dark:bg-dark-glass-white/60 backdrop-blur-xl border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass shadow-soft hover:shadow-glass transition-all duration-300">
+          <div class="p-8 md:p-10 space-y-8">
+            <div class="space-y-2">
+              <h3 class="text-2xl font-semibold text-glass-gray-800 dark:text-dark-glass-gray-800">Send a note</h3>
+              <p class="text-base text-glass-gray-600 dark:text-dark-glass-gray-600">
+                Share what you are building, what success looks like, and how I can help accelerate the next milestone.
+              </p>
+            </div>
 
-        Cal.ns.meet("inline", {
-          elementOrSelector:"#my-cal-inline-meet",
-          config: {"layout":"month_view"},
-          calLink: "francisco.contreras/meet",
-        });
+            <form id="portfolio-contact-form" class="space-y-6" data-contact-form novalidate>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <label class="flex flex-col">
+                  <span class="text-sm font-medium text-glass-gray-600 dark:text-dark-glass-gray-600 mb-2">Name*</span>
+                  <input
+                    name="name"
+                    type="text"
+                    required
+                    autocomplete="name"
+                    placeholder="How should I address you?"
+                    class="rounded-2xl border border-transparent bg-white/80 dark:bg-black/20 focus:border-glass-primary focus:ring-2 focus:ring-glass-primary/20 dark:focus:border-dark-glass-primary dark:focus:ring-dark-glass-primary/30 px-4 py-3 text-base text-glass-gray-800 dark:text-dark-glass-gray-100 transition-all duration-300 shadow-inner"
+                  />
+                </label>
+                <label class="flex flex-col">
+                  <span class="text-sm font-medium text-glass-gray-600 dark:text-dark-glass-gray-600 mb-2">Email*</span>
+                  <input
+                    name="email"
+                    type="email"
+                    required
+                    autocomplete="email"
+                    placeholder="Where can I reply?"
+                    class="rounded-2xl border border-transparent bg-white/80 dark:bg-black/20 focus:border-glass-primary focus:ring-2 focus:ring-glass-primary/20 dark:focus:border-dark-glass-primary dark:focus:ring-dark-glass-primary/30 px-4 py-3 text-base text-glass-gray-800 dark:text-dark-glass-gray-100 transition-all duration-300 shadow-inner"
+                  />
+                </label>
+                <label class="flex flex-col sm:col-span-2">
+                  <span class="text-sm font-medium text-glass-gray-600 dark:text-dark-glass-gray-600 mb-2">Company</span>
+                  <input
+                    name="company"
+                    type="text"
+                    autocomplete="organization"
+                    placeholder="Who are you building for?"
+                    class="rounded-2xl border border-transparent bg-white/80 dark:bg-black/20 focus:border-glass-primary focus:ring-2 focus:ring-glass-primary/20 dark:focus:border-dark-glass-primary dark:focus:ring-dark-glass-primary/30 px-4 py-3 text-base text-glass-gray-800 dark:text-dark-glass-gray-100 transition-all duration-300 shadow-inner"
+                  />
+                </label>
+              </div>
 
-        Cal.ns.meet("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-      </script>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <label class="flex flex-col">
+                  <span class="text-sm font-medium text-glass-gray-600 dark:text-dark-glass-gray-600 mb-2">Ideal timeline</span>
+                  <select
+                    name="timeline"
+                    class="rounded-2xl border border-transparent bg-white/80 dark:bg-black/20 focus:border-glass-primary focus:ring-2 focus:ring-glass-primary/20 dark:focus:border-dark-glass-primary dark:focus:ring-dark-glass-primary/30 px-4 py-3 text-base text-glass-gray-800 dark:text-dark-glass-gray-100 transition-all duration-300 shadow-inner"
+                  >
+                    <option value="">Select a window</option>
+                    <option>ASAP (next 2 weeks)</option>
+                    <option>Within a month</option>
+                    <option>1-3 months from now</option>
+                    <option>Exploring options</option>
+                  </select>
+                </label>
+                <label class="flex flex-col">
+                  <span class="text-sm font-medium text-glass-gray-600 dark:text-dark-glass-gray-600 mb-2">Scope / budget</span>
+                  <select
+                    name="budget"
+                    class="rounded-2xl border border-transparent bg-white/80 dark:bg-black/20 focus:border-glass-primary focus:ring-2 focus:ring-glass-primary/20 dark:focus:border-dark-glass-primary dark:focus:ring-dark-glass-primary/30 px-4 py-3 text-base text-glass-gray-800 dark:text-dark-glass-gray-100 transition-all duration-300 shadow-inner"
+                  >
+                    <option value="">Still figuring it out</option>
+                    <option>Advisory / fractional</option>
+                    <option>Project (under $10k)</option>
+                    <option>Project ($10k-$25k)</option>
+                    <option>Project ($25k+)</option>
+                  </select>
+                </label>
+              </div>
 
-      <style>
-        /* Hide Cal.com branding */
-        #my-cal-inline-meet iframe {
-          margin-bottom: -50px !important;
-        }
+              <label class="flex flex-col">
+                <span class="text-sm font-medium text-glass-gray-600 dark:text-dark-glass-gray-600 mb-2">What should I know?*</span>
+                <textarea
+                  name="message"
+                  required
+                  rows="5"
+                  placeholder="Share context, goals, and any links I should review before we connect."
+                  class="rounded-3xl border border-transparent bg-white/80 dark:bg-black/20 focus:border-glass-primary focus:ring-2 focus:ring-glass-primary/20 dark:focus:border-dark-glass-primary dark:focus:ring-dark-glass-primary/30 px-4 py-3 text-base text-glass-gray-800 dark:text-dark-glass-gray-100 transition-all duration-300 shadow-inner resize-none"
+                ></textarea>
+              </label>
 
-        /* Alternative approach - hide branding with CSS */
-        [data-cal-namespace="meet"] [class*="powered"],
-        [data-cal-namespace="meet"] [class*="branding"],
-        [data-cal-namespace="meet"] a[href*="cal.com"],
-        #my-cal-inline-meet [class*="powered"],
-        #my-cal-inline-meet [class*="branding"],
-        #my-cal-inline-meet a[href*="cal.com"] {
-          display: none !important;
-          visibility: hidden !important;
-          height: 0 !important;
-          overflow: hidden !important;
-        }
-      </style>
-      <!-- Cal inline embed code ends -->
+              <div class="space-y-3">
+                <button
+                  type="submit"
+                  data-contact-submit
+                  class="group relative w-full overflow-hidden rounded-2xl bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 text-base font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 hover:shadow-xl hover:scale-[1.01]"
+                >
+                  <span data-state="default">Send message</span>
+                  <span data-state="loading" class="hidden">Sending…</span>
+                </button>
+                <p class="text-xs text-glass-gray-500 dark:text-dark-glass-gray-500">
+                  Prefer email? Reach me directly at
+                  <a href="mailto:contrerasfrancisco@icloud.com" class="font-medium text-glass-primary dark:text-dark-glass-primary hover:underline">
+                    contrerasfrancisco@icloud.com
+                  </a>.
+                </p>
+                <div
+                  id="contact-feedback"
+                  data-contact-feedback
+                  class="hidden rounded-2xl px-4 py-3 text-sm font-medium"
+                  role="status"
+                  aria-live="polite"
+                ></div>
+              </div>
+            </form>
+          </div>
+        </div>
 
-      <!-- Contact Links at bottom of section -->
-      <div class="p-6 border-t border-glass-white/30 dark:border-dark-glass-white/30 bg-glass-white/20 dark:bg-dark-glass-white/20">
-        <div class="flex justify-center space-x-8">
-          <a href="mailto:contrerasfrancisco@icloud.com" class="flex items-center space-x-2 text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <span class="text-sm font-medium">contrerasfrancisco@icloud.com</span>
-          </a>
+        <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-xl border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass shadow-soft hover:shadow-glass transition-all duration-300">
+          <div class="p-8 md:p-10 space-y-6">
+            <div class="space-y-2">
+              <h3 class="text-2xl font-semibold text-glass-gray-800 dark:text-dark-glass-gray-800">Book time</h3>
+              <p class="text-base text-glass-gray-600 dark:text-dark-glass-gray-600">
+                Book a 15-minute exploratory call and let's pressure-test your growth goals together.
+              </p>
+            </div>
+            <div class="relative h-[620px]">
+              <!-- Cal inline embed code begins -->
+              <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-meet"></div>
+              <script type="text/javascript">
+                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                Cal("init", "meet", {origin:"https://app.cal.com"});
+                Cal.ns.meet("inline", {
+                  elementOrSelector:"#my-cal-inline-meet",
+                  config: {"layout":"month_view"},
+                  calLink: "francisco.contreras/meet",
+                });
+                Cal.ns.meet("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+              </script>
+              <!-- Cal inline embed code ends -->
+            </div>
+          </div>
 
-          <a href="https://www.linkedin.com/in/contreras-francisco/" target="_blank" class="flex items-center space-x-2 text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-            <span class="text-sm font-medium">LinkedIn</span>
-          </a>
+          <style>
+            /* Hide Cal.com branding */
+            #my-cal-inline-meet iframe {
+              border-radius: 0 0 24px 24px;
+            }
+
+            [data-cal-namespace='meet'] [class*='powered'],
+            [data-cal-namespace='meet'] [class*='branding'],
+            [data-cal-namespace='meet'] a[href*='cal.com'],
+            #my-cal-inline-meet [class*='powered'],
+            #my-cal-inline-meet [class*='branding'],
+            #my-cal-inline-meet a[href*='cal.com'] {
+              display: none !important;
+              visibility: hidden !important;
+              height: 0 !important;
+              overflow: hidden !important;
+            }
+          </style>
+
+          <div class="flex flex-wrap items-center gap-4 border-t border-glass-white/40 dark:border-dark-glass-white/30 bg-glass-white/30 dark:bg-dark-glass-white/10 px-8 py-6">
+            <a
+              href="mailto:contrerasfrancisco@icloud.com"
+              class="flex items-center gap-2 text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span class="text-sm font-medium">Email me</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/contreras-francisco/"
+              target="_blank"
+              rel="noreferrer"
+              class="flex items-center gap-2 text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              <span class="text-sm font-medium">LinkedIn</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    ) : (
+      <div class="max-w-5xl mx-auto">
+        <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-xl border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass shadow-soft hover:shadow-glass transition-all duration-300">
+          <div class="p-8 md:p-10 space-y-6">
+            <div class="space-y-2">
+              <h3 class="text-2xl font-semibold text-glass-gray-800 dark:text-dark-glass-gray-800">Book time</h3>
+              <p class="text-base text-glass-gray-600 dark:text-dark-glass-gray-600">
+                Book a 15-minute exploratory call and let's pressure-test your growth goals together.
+              </p>
+            </div>
+            <div class="relative h-[620px]">
+              <!-- Cal inline embed code begins -->
+              <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-meet"></div>
+              <script type="text/javascript">
+                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                Cal("init", "meet", {origin:"https://app.cal.com"});
+                Cal.ns.meet("inline", {
+                  elementOrSelector:"#my-cal-inline-meet",
+                  config: {"layout":"month_view"},
+                  calLink: "francisco.contreras/meet",
+                });
+                Cal.ns.meet("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+              </script>
+              <!-- Cal inline embed code ends -->
+            </div>
+          </div>
+
+          <style>
+            #my-cal-inline-meet iframe {
+              border-radius: 0 0 24px 24px;
+            }
+
+            [data-cal-namespace='meet'] [class*='powered'],
+            [data-cal-namespace='meet'] [class*='branding'],
+            [data-cal-namespace='meet'] a[href*='cal.com'],
+            #my-cal-inline-meet [class*='powered'],
+            #my-cal-inline-meet [class*='branding'],
+            #my-cal-inline-meet a[href*='cal.com'] {
+              display: none !important;
+              visibility: hidden !important;
+              height: 0 !important;
+              overflow: hidden !important;
+            }
+          </style>
+
+          <div class="flex flex-wrap items-center gap-4 border-t border-glass-white/40 dark:border-dark-glass-white/30 bg-glass-white/30 dark:bg-dark-glass-white/10 px-8 py-6">
+            <a
+              href="mailto:contrerasfrancisco@icloud.com"
+              class="flex items-center gap-2 text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span class="text-sm font-medium">Email me</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/contreras-francisco/"
+              target="_blank"
+              rel="noreferrer"
+              class="flex items-center gap-2 text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              <span class="text-sm font-medium">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    )}
   </div>
 </section>
+
+{showForm && <script type="module" src={enhanceContactFormScript}></script>}
