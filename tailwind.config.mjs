@@ -43,7 +43,8 @@ export default {
         'dark-glass-primary-dark': '#F1F5F9',
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'sans': ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        'serif': ['Playfair Display', 'Georgia', 'serif'],
       },
       backdropBlur: {
         'xs': '2px',

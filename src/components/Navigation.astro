@@ -9,10 +9,16 @@
       <div class="absolute left-0 flex items-center">
         <a href="/" class="block">
           <img
-            id="francisco-logo"
+            id="francisco-logo-light"
             src="/logo/Francisco-animated.svg"
             alt="Francisco"
-            class="h-5 w-auto text-glass-gray-800 dark:text-dark-glass-gray-800 transition-colors duration-300"
+            class="h-5 w-auto transition-all duration-300 dark:hidden"
+          />
+          <img
+            id="francisco-logo-dark"
+            src="/logo/Francisco-animated-white.svg"
+            alt="Francisco"
+            class="h-5 w-auto transition-all duration-300 hidden dark:block"
           />
         </a>
       </div>
@@ -134,17 +140,24 @@
       }
     }, 100);
 
-    // Trigger logo animation on page load
-    const logo = document.getElementById('francisco-logo');
-    if (logo) {
-      // Force animation restart by cloning and replacing the element
-      const restartAnimation = () => {
-        const newLogo = logo.cloneNode(true);
-        logo.parentNode.replaceChild(newLogo, logo);
-      };
+    // Trigger logo animation on page load for both logos
+    const logoLight = document.getElementById('francisco-logo-light');
+    const logoDark = document.getElementById('francisco-logo-dark');
 
-      // Restart animation when logo is clicked
-      logo.addEventListener('click', restartAnimation);
+    // Function to restart animation for a logo
+    const restartLogoAnimation = (logoElement) => {
+      if (logoElement) {
+        const newLogo = logoElement.cloneNode(true);
+        logoElement.parentNode.replaceChild(newLogo, logoElement);
+      }
+    };
+
+    // Add click handlers to both logos
+    if (logoLight) {
+      logoLight.addEventListener('click', () => restartLogoAnimation(logoLight));
+    }
+    if (logoDark) {
+      logoDark.addEventListener('click', () => restartLogoAnimation(logoDark));
     }
 
     // Mobile menu functionality
