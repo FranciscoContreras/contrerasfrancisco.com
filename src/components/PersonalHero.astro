@@ -5,15 +5,25 @@
 <section id="home" class="pt-40 pb-24 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
   <div class="max-w-5xl mx-auto text-center">
     <!-- Personal Greeting with Profile Photo -->
-    <h1 class="text-3xl md:text-4xl font-bold text-glass-gray-800 dark:text-dark-glass-gray-800 mb-8 leading-tight transition-colors duration-300 flex items-center justify-center gap-3 flex-wrap">
-      Hi, I'm Francisco
-      <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white text-lg md:text-xl font-bold shadow-glass">
-        F
+    <div class="flex items-center justify-center gap-4 mb-6">
+      <h1 class="text-3xl md:text-4xl font-bold text-glass-gray-800 dark:text-dark-glass-gray-800 leading-tight transition-colors duration-300">
+        Hi, I'm Francisco
+      </h1>
+      <div class="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden shadow-glass ring-2 ring-glass-white/20 dark:ring-dark-glass-white/20">
+        <img
+          src="/images/francisco-profile.png"
+          alt="Francisco Contreras"
+          class="w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
+          width="56"
+          height="56"
+        />
       </div>
-    </h1>
+    </div>
 
     <!-- Italic Subtitle -->
-    <p class="text-lg md:text-xl italic text-glass-gray-600 dark:text-dark-glass-gray-600 mb-4 font-light transition-colors duration-300">
+    <p class="text-lg md:text-xl font-serif italic text-glass-gray-600 dark:text-dark-glass-gray-600 mb-4 transition-colors duration-300">
       Product marketer for AI, Customers and automation
     </p>
 
@@ -24,12 +34,22 @@
 
     <!-- CTA Buttons -->
     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-      <a href="#contact" class="group relative bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-sm font-medium transition-all duration-500 shadow-glass focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 flex items-center gap-2 overflow-hidden hover:shadow-xl hover:scale-105 hover:bg-white hover:text-glass-primary">
-        <span class="relative z-10 transition-colors duration-500">Schedule eCoffee ☕</span>
+      <a
+        href="/contact"
+        class="group relative bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-sm font-medium transition-all duration-500 shadow-glass focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 flex items-center gap-2 overflow-hidden hover:shadow-xl hover:scale-105 hover:bg-white hover:text-glass-primary"
+        aria-label="Schedule a coffee chat meeting"
+      >
+        <span class="relative z-10 transition-colors duration-500">Schedule eCoffee</span>
+        <span class="relative z-10 transition-colors duration-500" aria-hidden="true">☕</span>
         <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       </a>
-      <a href="#playbook" class="group relative bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-sm font-medium transition-all duration-500 shadow-glass focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 flex items-center gap-2 overflow-hidden hover:shadow-xl hover:scale-105 hover:bg-white hover:text-glass-primary">
-        <span class="relative z-10 transition-colors duration-500">View my playbook 📖</span>
+      <a
+        href="#highlights"
+        class="group relative bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-sm font-medium transition-all duration-500 shadow-glass focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 flex items-center gap-2 overflow-hidden hover:shadow-xl hover:scale-105 hover:bg-white hover:text-glass-primary"
+        aria-label="View my marketing playbook and case studies"
+      >
+        <span class="relative z-10 transition-colors duration-500">View my playbook</span>
+        <span class="relative z-10 transition-colors duration-500" aria-hidden="true">📖</span>
         <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       </a>
     </div>

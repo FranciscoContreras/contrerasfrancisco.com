@@ -7,20 +7,23 @@
     <div class="flex justify-center items-center h-14 relative">
       <!-- Logo positioned absolutely on left -->
       <div class="absolute left-0 flex items-center">
-        <div class="w-8 h-8 bg-glass-primary dark:bg-dark-glass-primary rounded-glass-sm flex items-center justify-center shadow-glass-sm">
-          <svg class="w-4 h-4 text-glass-white dark:text-dark-glass-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-        </div>
+        <a href="/" class="block">
+          <img
+            id="francisco-logo"
+            src="/logo/Francisco-animated.svg"
+            alt="Francisco"
+            class="h-5 w-auto text-glass-gray-800 dark:text-dark-glass-gray-800 transition-colors duration-300"
+          />
+        </a>
       </div>
 
       <!-- Centered Navigation Menu -->
       <div class="hidden md:block">
         <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass px-6 py-2 flex items-center space-x-6 shadow-frost border border-glass-gray-200/10 dark:border-dark-glass-gray-200/10">
-          <a href="#home" class="text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary text-sm font-medium transition-all duration-300">Home</a>
-          <a href="#projects" class="text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary text-sm font-medium transition-all duration-300">Projects</a>
-          <a href="#performance" class="text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary text-sm font-medium transition-all duration-300">Performance</a>
-          <a href="#about" class="text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary text-sm font-medium transition-all duration-300">About</a>
+          <a href="/" class="text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary text-sm font-medium transition-all duration-300">francisco</a>
+          <a href="/writings" class="text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary text-sm font-medium transition-all duration-300">writings</a>
+          <a href="/resources" class="text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary text-sm font-medium transition-all duration-300">resources</a>
+          <a href="/contact" class="text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary text-sm font-medium transition-all duration-300">contact</a>
         </div>
       </div>
 
@@ -46,12 +49,76 @@
         
         <!-- Mobile menu button -->
         <div class="md:hidden">
-          <button type="button" class="w-8 h-8 bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass-sm flex items-center justify-center shadow-frost border border-glass-white/20 dark:border-dark-glass-white/20 text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button
+            type="button"
+            id="mobile-menu-button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Toggle navigation menu"
+            class="w-8 h-8 bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg rounded-glass-sm flex items-center justify-center shadow-frost border border-glass-white/20 dark:border-dark-glass-white/20 text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20"
+          >
+            <svg id="menu-icon" class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="close-icon" class="h-4 w-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-glass-white/95 dark:bg-dark-glass-white/95 backdrop-blur-lg z-40"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="mobile-menu-title"
+  >
+    <div class="flex flex-col h-full pt-20 px-4">
+      <h2 id="mobile-menu-title" class="sr-only">Navigation Menu</h2>
+
+      <nav class="flex flex-col space-y-6" role="navigation">
+        <a
+          href="/"
+          class="text-2xl font-medium text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 rounded p-2"
+          onclick="closeMobileMenu()"
+        >
+          francisco
+        </a>
+        <a
+          href="/writings"
+          class="text-2xl font-medium text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 rounded p-2"
+          onclick="closeMobileMenu()"
+        >
+          writings
+        </a>
+        <a
+          href="/resources"
+          class="text-2xl font-medium text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 rounded p-2"
+          onclick="closeMobileMenu()"
+        >
+          resources
+        </a>
+        <a
+          href="/contact"
+          class="text-2xl font-medium text-glass-gray-700 dark:text-dark-glass-gray-700 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20 rounded p-2"
+          onclick="closeMobileMenu()"
+        >
+          contact
+        </a>
+      </nav>
+
+      <div class="mt-8">
+        <a
+          href="/contact"
+          class="inline-block bg-glass-primary dark:bg-dark-glass-primary text-glass-white dark:text-dark-glass-white px-6 py-3 rounded-glass text-lg font-medium transition-all duration-300 shadow-glass focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20"
+          onclick="closeMobileMenu()"
+        >
+          Book an intro call
+        </a>
       </div>
     </div>
   </div>
@@ -66,5 +133,95 @@
         window.updateThemeIcons();
       }
     }, 100);
+
+    // Trigger logo animation on page load
+    const logo = document.getElementById('francisco-logo');
+    if (logo) {
+      // Force animation restart by cloning and replacing the element
+      const restartAnimation = () => {
+        const newLogo = logo.cloneNode(true);
+        logo.parentNode.replaceChild(newLogo, logo);
+      };
+
+      // Restart animation when logo is clicked
+      logo.addEventListener('click', restartAnimation);
+    }
+
+    // Mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+
+        if (isOpen) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+          closeMobileMenu();
+        }
+      }
+    });
+
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        closeMobileMenu();
+      }
+    });
   });
+
+  // Global mobile menu functions
+  window.openMobileMenu = function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileMenu) {
+      mobileMenu.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+
+      if (mobileMenuButton) {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+      }
+
+      if (menuIcon && closeIcon) {
+        menuIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      }
+    }
+  };
+
+  window.closeMobileMenu = function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileMenu) {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = '';
+
+      if (mobileMenuButton) {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+      }
+
+      if (menuIcon && closeIcon) {
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    }
+  };
 </script>
