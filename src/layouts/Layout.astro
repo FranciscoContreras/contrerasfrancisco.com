@@ -194,19 +194,37 @@ const { title } = Astro.props;
         updateThemeIcons();
       };
 
-      // Update theme icons
+      // Update theme icons for both desktop and mobile
       window.updateThemeIcons = function() {
         const isDark = document.documentElement.classList.contains('dark');
-        const sunIcon = document.getElementById('sun-icon');
-        const moonIcon = document.getElementById('moon-icon');
 
-        if (sunIcon && moonIcon) {
+        // Desktop icons
+        const sunIconDesktop = document.getElementById('sun-icon-desktop');
+        const moonIconDesktop = document.getElementById('moon-icon-desktop');
+
+        // Mobile icons
+        const sunIconMobile = document.getElementById('sun-icon-mobile');
+        const moonIconMobile = document.getElementById('moon-icon-mobile');
+
+        // Update desktop icons
+        if (sunIconDesktop && moonIconDesktop) {
           if (isDark) {
-            sunIcon.classList.remove('hidden');
-            moonIcon.classList.add('hidden');
+            sunIconDesktop.classList.remove('hidden');
+            moonIconDesktop.classList.add('hidden');
           } else {
-            sunIcon.classList.add('hidden');
-            moonIcon.classList.remove('hidden');
+            sunIconDesktop.classList.add('hidden');
+            moonIconDesktop.classList.remove('hidden');
+          }
+        }
+
+        // Update mobile icons
+        if (sunIconMobile && moonIconMobile) {
+          if (isDark) {
+            sunIconMobile.classList.remove('hidden');
+            moonIconMobile.classList.add('hidden');
+          } else {
+            sunIconMobile.classList.add('hidden');
+            moonIconMobile.classList.remove('hidden');
           }
         }
       };
