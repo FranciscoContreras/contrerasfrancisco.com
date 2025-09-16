@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import enhanceContactFormScript from '../scripts/enhanceContactForm.ts?url';
-import loadCalEmbedScript from '../scripts/deferredCalEmbed.ts?url';
 ---
 
 <Layout title="Contact - Francisco Contreras">
@@ -164,15 +163,22 @@ import loadCalEmbedScript from '../scripts/deferredCalEmbed.ts?url';
 
         <!-- Cal.com Embed -->
         <div class="bg-glass-white/60 dark:bg-dark-glass-white/60 backdrop-blur-lg border border-glass-white/40 dark:border-dark-glass-white/40 rounded-glass overflow-hidden shadow-soft hover:shadow-glass transition-all duration-300">
-          <div
-            class="relative h-[600px]"
-            data-cal-embed
-            data-cal-namespace="meet-contact"
-            data-cal-target="cal-inline-contact"
-            data-cal-link="francisco.contreras/meet"
-            data-cal-layout="month_view"
-          >
-            <div style="width:100%;height:100%;overflow:scroll" id="cal-inline-contact"></div>
+          <div class="relative h-[600px]">
+            <!-- Cal inline embed code begins -->
+            <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-meet-contact"></div>
+            <script type="text/javascript">
+              (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+              Cal("init", "meet-contact", {origin:"https://app.cal.com"});
+
+              Cal.ns["meet-contact"]("inline", {
+                elementOrSelector:"#my-cal-inline-meet-contact",
+                config: {"layout":"month_view","theme":"auto"},
+                calLink: "francisco.contreras/meet",
+              });
+
+              Cal.ns["meet-contact"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+            </script>
+            <!-- Cal inline embed code ends -->
           </div>
 
           <style>
@@ -217,4 +223,3 @@ import loadCalEmbedScript from '../scripts/deferredCalEmbed.ts?url';
 
 <script type="module" src={enhanceContactFormScript}></script>
 
-<script type="module" src={loadCalEmbedScript}></script>
