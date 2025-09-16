@@ -3,6 +3,6 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://your-portfolio.com',
+  site: 'https://contrerasfrancisco.com',
   output: 'static'
 });
