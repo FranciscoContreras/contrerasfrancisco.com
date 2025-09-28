@@ -101,6 +101,19 @@
     <div class="flex flex-col h-full pt-20 px-4">
       <h2 id="mobile-menu-title" class="sr-only">Navigation Menu</h2>
 
+      <div class="flex justify-end mb-6">
+        <button
+          type="button"
+          class="w-10 h-10 bg-glass-white/70 dark:bg-dark-glass-white/70 backdrop-blur-lg rounded-full flex items-center justify-center shadow-frost border border-glass-white/20 dark:border-dark-glass-white/20 text-glass-gray-600 dark:text-dark-glass-gray-600 hover:text-glass-primary dark:hover:text-dark-glass-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-glass-primary/20 dark:focus:ring-dark-glass-primary/20"
+          aria-label="Close navigation menu"
+          onclick="closeMobileMenu()"
+        >
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
       <nav class="flex flex-col space-y-6" role="navigation">
         <a
           href="/"
@@ -197,48 +210,6 @@
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
-    const nav = document.getElementById('site-nav');
-    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
-
-    const updateNavPosition = () => {
-      if (!nav) return;
-      const isMobile = window.matchMedia('(max-width: 767px)').matches;
-      if (isMobile && window.scrollY > 24) {
-        nav.style.top = 'auto';
-        nav.style.bottom = '1.5rem';
-        nav.style.left = '0';
-        nav.style.right = '0';
-        nav.style.paddingLeft = '1rem';
-        nav.style.paddingRight = '1rem';
-        nav.classList.add('backdrop-blur-md');
-        if (mobileThemeToggle) {
-          mobileThemeToggle.style.bottom = '5.5rem';
-        }
-      } else {
-        nav.style.top = '2rem';
-        nav.style.bottom = '';
-        nav.style.paddingLeft = '';
-        nav.style.paddingRight = '';
-        nav.classList.remove('backdrop-blur-md');
-        if (mobileThemeToggle) {
-          mobileThemeToggle.style.bottom = '1.5rem';
-        }
-      }
-
-      if (!isMobile) {
-        nav.style.top = '2rem';
-        nav.style.bottom = '';
-        nav.style.paddingLeft = '';
-        nav.style.paddingRight = '';
-        if (mobileThemeToggle) {
-          mobileThemeToggle.style.bottom = '1.5rem';
-        }
-      }
-    };
-
-    updateNavPosition();
-    window.addEventListener('scroll', updateNavPosition, { passive: true });
-    window.addEventListener('resize', updateNavPosition);
 
     if (mobileMenuButton && mobileMenu) {
       mobileMenuButton.addEventListener('click', function() {
