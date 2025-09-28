@@ -1,6 +1,4 @@
 ---
-import enhanceContactFormScript from '../scripts/enhanceContactForm.ts?url';
-
 interface Props {
   variant?: 'full' | 'cal-only';
 }
@@ -280,5 +278,3 @@ const showForm = variant !== 'cal-only';
     )}
   </div>
 </section>
-
-{showForm && <script type="module" src={enhanceContactFormScript}></script>}

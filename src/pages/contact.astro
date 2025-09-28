@@ -109,17 +109,95 @@ import Footer from '../components/Footer.astro';
           <div class="relative h-[600px]">
             <!-- Cal inline embed code begins -->
             <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-meet-contact"></div>
-            <script type="text/javascript">
-              (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-              Cal("init", "meet-contact", {origin:"https://app.cal.com"});
+            <script type="module">
+              const CAL_EMBED_ID = 'my-cal-inline-meet-contact';
+              const SCRIPT_SRC = 'https://app.cal.com/embed/embed.js';
 
-              Cal.ns["meet-contact"]("inline", {
-                elementOrSelector:"#my-cal-inline-meet-contact",
-                config: {"layout":"month_view","theme":"auto"},
-                calLink: "francisco.contreras/meet",
-              });
+              const loadCalEmbed = () => {
+                if (typeof window === 'undefined' || window.__calEmbedLoaded) {
+                  return;
+                }
 
-              Cal.ns["meet-contact"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+                const embedRoot = document.getElementById(CAL_EMBED_ID);
+                if (!embedRoot) {
+                  return;
+                }
+
+                window.__calEmbedLoaded = true;
+
+                (function (C, A, L) {
+                  const p = function (a, ar) { a.q.push(ar); };
+                  const d = C.document;
+                  C.Cal = C.Cal || function () {
+                    const cal = C.Cal;
+                    const ar = arguments;
+                    if (!cal.loaded) {
+                      cal.ns = {};
+                      cal.q = cal.q || [];
+                      const script = d.createElement('script');
+                      script.src = A;
+                      script.defer = true;
+                      script.referrerPolicy = 'strict-origin-when-cross-origin';
+                      d.head.appendChild(script);
+                      cal.loaded = true;
+                    }
+                    if (ar[0] === L) {
+                      const api = function () { p(api, arguments); };
+                      const namespace = ar[1];
+                      api.q = api.q || [];
+                      if (typeof namespace === 'string') {
+                        cal.ns[namespace] = cal.ns[namespace] || api;
+                        p(cal.ns[namespace], ar);
+                        p(cal, ['initNamespace', namespace]);
+                      } else {
+                        p(cal, ar);
+                      }
+                      return;
+                    }
+                    p(cal, ar);
+                  };
+                })(window, SCRIPT_SRC, 'init');
+
+                window.Cal('init', 'meet-contact', { origin: 'https://app.cal.com' });
+                window.Cal.ns['meet-contact']('inline', {
+                  elementOrSelector: `#${CAL_EMBED_ID}`,
+                  config: { layout: 'month_view', theme: 'auto' },
+                  calLink: 'francisco.contreras/meet',
+                });
+                window.Cal.ns['meet-contact']('ui', { hideEventTypeDetails: false, layout: 'month_view' });
+              };
+
+              const scheduleCalLoad = () => {
+                const execute = () => {
+                  if ('requestIdleCallback' in window) {
+                    requestIdleCallback(() => loadCalEmbed(), { timeout: 2000 });
+                  } else {
+                    setTimeout(() => loadCalEmbed(), 100);
+                  }
+                };
+
+                const embedRoot = document.getElementById(CAL_EMBED_ID);
+                if (!embedRoot) {
+                  return;
+                }
+
+                if ('IntersectionObserver' in window) {
+                  const observer = new IntersectionObserver((entries, obs) => {
+                    const isVisible = entries.some((entry) => entry.isIntersecting);
+                    if (isVisible) {
+                      obs.disconnect();
+                      execute();
+                    }
+                  }, { rootMargin: '200px 0px' });
+                  observer.observe(embedRoot);
+                } else {
+                  window.addEventListener('load', execute, { once: true });
+                }
+              };
+
+              if (typeof window !== 'undefined') {
+                scheduleCalLoad();
+              }
             </script>
             <!-- Cal inline embed code ends -->
           </div>
