@@ -33,7 +33,7 @@ const jsonLd = {
       description: metaDescription,
       primaryImageOfPage: {
         '@type': 'ImageObject',
-        url: `${siteUrl}/images/francisco-profile-1200.jpg`
+        url: `${siteUrl}/logo/Francisco.svg`
       },
       breadcrumb: {
         '@id': `${siteUrl}/#breadcrumb`
@@ -136,16 +136,16 @@ const jsonLd = {
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://contrerasfrancisco.com/" />
-    <meta property="og:title" content="{title}" />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={metaDescription} />
-    <meta property="og:image" content="https://contrerasfrancisco.com/images/francisco-profile-1200.jpg" />
+    <meta property="og:image" content="https://contrerasfrancisco.com/logo/Francisco.svg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://contrerasfrancisco.com/" />
-    <meta property="twitter:title" content="{title}" />
+    <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={metaDescription} />
-    <meta property="twitter:image" content="https://contrerasfrancisco.com/images/francisco-profile-1200.jpg" />
+    <meta property="twitter:image" content="https://contrerasfrancisco.com/logo/Francisco.svg" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">{JSON.stringify(jsonLd, null, 2)}</script>

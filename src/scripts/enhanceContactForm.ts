@@ -85,7 +85,8 @@ const enhanceForm = (form: HTMLFormElement) => {
       const data = await response.json().catch(() => ({}));
       if (response.ok) {
         form.reset();
-        showFeedback('success', form.dataset.successMessage || successFallback);
+        const message = data?.message || form.dataset.successMessage || successFallback;
+        showFeedback('success', message);
       } else {
         showFeedback('error', data?.error || form.dataset.errorMessage || errorFallback);
       }

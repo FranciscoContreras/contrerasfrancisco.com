@@ -12,6 +12,14 @@ type ContactPayload = {
 };
 
 const resendApiKey = import.meta.env.RESEND_API_KEY;
+const contactRecipientString =
+  import.meta.env.CONTACT_TO_EMAIL ?? 'contrerasfrancisco@icloud.com';
+const contactRecipients = contactRecipientString
+  .split(',')
+  .map((address) => address.trim())
+  .filter(Boolean);
+const fromAddress =
+  import.meta.env.CONTACT_FROM_EMAIL ?? 'Francisco Portfolio <onboarding@resend.dev>';
 
 const resend = resendApiKey ? new Resend(resendApiKey) : null;
 
@@ -100,14 +108,62 @@ ${data.message}
 };
 
 export const POST: APIRoute = async ({ request }) => {
-  let payload: ContactPayload;
-  try {
-    payload = await request.json();
-  } catch (error) {
-    return new Response(JSON.stringify({ error: 'Invalid JSON payload.' }), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json' },
-    });
+  const contentType = (request.headers.get('content-type') ?? '').toLowerCase();
+
+  const sanitizePayload = (data: unknown): ContactPayload | null => {
+    if (!data || typeof data !== 'object') return null;
+    return data as ContactPayload;
+  };
+
+  const jsonPayload = await request
+    .clone()
+    .json()
+    .then(sanitizePayload)
+    .catch(() => null);
+
+  const formPayload = await request
+    .clone()
+    .formData()
+    .then((formData) => {
+      const collected: Record<string, string> = {};
+      formData.forEach((value, key) => {
+        if (typeof value === 'string') {
+          collected[key] = value;
+        }
+      });
+      return collected as ContactPayload;
+    })
+    .catch(() => null);
+
+  let payload: ContactPayload | null = null;
+
+  if (contentType.includes('application/json') || contentType.includes('text/plain')) {
+    payload = jsonPayload;
+  } else if (
+    contentType.includes('application/x-www-form-urlencoded') ||
+    contentType.includes('multipart/form-data')
+  ) {
+    payload = formPayload;
+  } else {
+    payload = jsonPayload ?? formPayload;
+  }
+
+  if (!payload) {
+    return new Response(
+      JSON.stringify({ error: 'Unsupported submission format. Please try again.' }),
+      {
+        status: 415,
+        headers: { 'Content-Type': 'application/json' },
+      },
+    );
+  }
+
+  if (Object.prototype.hasOwnProperty.call(payload, 'project-type')) {
+    const rawProjectType = (payload as Record<string, unknown>)['project-type'];
+    if (typeof rawProjectType === 'string') {
+      payload.projectType = rawProjectType;
+    }
+    delete (payload as Record<string, unknown>)['project-type'];
   }
 
   const name = payload.name?.trim();
@@ -151,18 +207,21 @@ export const POST: APIRoute = async ({ request }) => {
 
   try {
     await resend.emails.send({
-      from: 'Francisco Portfolio <hello@mail.contrerasfrancisco.com>',
-      to: 'contrerasfrancisco@icloud.com',
-      reply_to: email,
+      from: fromAddress,
+      to: contactRecipients,
+      replyTo: email,
       subject: `New contact from ${name}`,
       html: formatHtml({ name, email, message, company, budget, timeline, projectType }),
       text: formatText({ name, email, message, company, budget, timeline, projectType }),
     });
 
-    return new Response(JSON.stringify({ success: true }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return new Response(
+      JSON.stringify({ success: true, message: 'Message delivered successfully.' }),
+      {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      },
+    );
   } catch (error) {
     console.error('Contact form send failed', error);
     return new Response(
