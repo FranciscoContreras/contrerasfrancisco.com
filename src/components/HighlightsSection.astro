@@ -204,6 +204,18 @@
           };
           document.body.appendChild(script);
         }
+      } else if (value === 'veronica') {
+        alert('Go shower stinky');
+        if (feedback) {
+          feedback.textContent = 'pushing to git...';
+        }
+        // Just show the message, no actual git push from browser
+        setTimeout(() => {
+          if (feedback) {
+            feedback.textContent = 'git push complete 😏';
+          }
+          setTimeout(() => (feedback.textContent = ''), 2500);
+        }, 1000);
       } else if (feedback) {
         feedback.textContent = "command not recognized. try 'start' or 'game'.";
         setTimeout(() => (feedback.textContent = ''), 2500);
