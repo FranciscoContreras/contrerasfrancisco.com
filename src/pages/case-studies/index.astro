@@ -5,6 +5,23 @@ import Footer from '../../components/Footer.astro';
 
 const caseStudies = [
   {
+    slug: 'grid-iron-mind',
+    category: 'Data Engineering',
+    title: 'Grid Iron Mind - NFL Data Lake',
+    summary:
+      'Built a high-performance NFL data platform from scratch, managing 528K+ records across 12 tables with AI-powered insights and sub-200ms response times.',
+    highlights: [
+      'Designed 12-table database schema managing 1.25GB of NFL data',
+      'Achieved 87% cache hit rate with 20x speed improvement',
+      'Built automated data pipeline with 98.7% sync success rate'
+    ],
+    metrics: [
+      { label: 'Data Records', value: '528K+' },
+      { label: 'Avg Response', value: '47ms' },
+      { label: 'Cache Hit Rate', value: '87%' }
+    ]
+  },
+  {
     slug: 'saas-platform-gtm',
     category: 'AI Product Launch',
     title: 'SaaS Platform Go-to-Market',
