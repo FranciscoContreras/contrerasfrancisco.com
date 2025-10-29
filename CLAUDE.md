@@ -56,7 +56,7 @@ public/
 ```
 
 ### Layout System
-- `Layout.astro` is the main layout wrapper used by all pages
+- [Layout.astro](src/layouts/Layout.astro) is the main layout wrapper used by all pages
 - Contains comprehensive SEO metadata (OpenGraph, Twitter cards, JSON-LD structured data)
 - Implements dark mode toggle functionality via localStorage
 - Includes accessibility features (skip links, screen reader utilities)
@@ -81,7 +81,7 @@ import Footer from '../components/Footer.astro';
 ### Styling Architecture
 
 **Theme System:**
-- Custom Tailwind configuration with extensive color system (`tailwind.config.mjs`)
+- Custom Tailwind configuration with extensive color system ([tailwind.config.mjs](tailwind.config.mjs))
 - Light mode colors prefixed with `glass-` (e.g., `glass-bg`, `glass-gray-800`)
 - Dark mode colors prefixed with `dark-glass-` (e.g., `dark-glass-bg`, `dark-glass-card`)
 - Dark mode toggle via `dark` class on `<html>` element
@@ -97,11 +97,11 @@ import Footer from '../components/Footer.astro';
 **Dark Mode Implementation:**
 - Background: `#050712` (enforced via inline styles to prevent flicker)
 - Card background: `#0d122b`
-- Theme toggle script in Layout.astro prevents flash of unstyled content
+- Theme toggle script in [Layout.astro](src/layouts/Layout.astro#L252-L325) prevents flash of unstyled content
 - Global `toggleTheme()` function available to all components
 
 ### Contact Form
-- Located in `src/components/ContactForm.astro`
+- Located in [src/components/ContactForm.astro](src/components/ContactForm.astro)
 - Supports two variants: `full` (with form) and `cal-only` (just Cal.com embed)
 - Uses Resend API for email sending (requires environment variables)
 - Form validation handled client-side
@@ -113,23 +113,23 @@ Required for contact form functionality:
 - `CONTACT_FROM_EMAIL` - Sender email address
 
 ### SEO & Performance
-- Comprehensive JSON-LD structured data in Layout.astro (Person, Organization, Service, WebSite schemas)
+- Comprehensive JSON-LD structured data in [Layout.astro](src/layouts/Layout.astro#L11-L122) (Person, Organization, Service, WebSite schemas)
 - OpenGraph and Twitter card meta tags
 - Font loading optimized with `media="print"` + onload switch
 - Preconnect hints for external resources (fonts, Cal.com)
 - Image optimization with proper width/height attributes
-- Performance CSS inlined in Layout.astro
+- Performance CSS inlined in [Layout.astro](src/layouts/Layout.astro#L164-L239)
 
 ### No TypeScript Configuration
 - Project uses TypeScript for type checking via Astro's built-in support
 - No separate `tsconfig.json` required
-- Type definitions in `src/env.d.ts`
+- Type definitions in [src/env.d.ts](src/env.d.ts)
 
 ## Development Guidelines
 
 ### Adding New Pages
 1. Create `.astro` file in `src/pages/` (filename becomes route)
-2. Import and use `Layout.astro` wrapper
+2. Import and use [Layout.astro](src/layouts/Layout.astro) wrapper
 3. Include `Navigation` and `Footer` components
 4. Set appropriate page title via Layout props
 
